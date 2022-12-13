@@ -9,9 +9,10 @@ from os.path import join as p_join
 
 
 class Agent:
-    def __init__(self, num_actions, image_channels, batch_size, learning_rate, device):
+    def __init__(self, num_actions, image_channels, batch_size, learning_rate, device, train=True):
         self.num_actions = num_actions
         #self.writer = writer
+        self.device=device
         self.batch_size = batch_size
         """
         self.augment_flip = augment_flip
@@ -32,15 +33,17 @@ class Agent:
         """
 
         self.net = Network(image_channels, num_actions).to(device=device)
-
-        self.net.train()
-
+        if(train):
+            self.net.train()
+        print(self.net)
         self.optimiser = optim.Adam(self.net.parameters(), lr=learning_rate, weight_decay=1e-5)
 
-    def act(self, img, vec):
+    def act(self, img):
         with torch.no_grad():
-
-            logits = self.net(img)#, vec)
+            print("ACT IMG",img.size())
+            img=torch.permute(torch.unsqueeze(img,0), [0,3,1,2])
+            print(img.size())
+            logits = self.net(img.type(torch.FloatTensor).to(self.device))#, vec)
             probs = F.softmax(logits, 1).detach().cpu().numpy()
 
             actions = [np.random.choice(len(p), p=p) for p in probs]#?? sample from prob distribution
@@ -69,6 +72,7 @@ class Agent:
         print("Learning")
         logits = self.net(states)
         loss = F.cross_entropy(logits, actions)
+        print(loss)
 
         """        if write:
             if self.writer is not None:
@@ -86,6 +90,7 @@ class Agent:
         torch.save(state, p_join(path, f'state_{id_}.pth'))
 
     def load(self, path, id_=None):
+        print("loading")
         if id_ is None:
             self.net.load_state_dict(torch.load(p_join(path, 'model.pth')))
             state = torch.load(p_join(path, 'state.pth'))
@@ -94,6 +99,7 @@ class Agent:
             self.net.load_state_dict(torch.load(p_join(path, f'model_{id_}.pth')))
             state = torch.load(p_join(path, f'state_{id_}.pth'))
             self.optimiser.load_state_dict(state['optimizer'])
+        self.net.to(self.device)
 
     def train(self):
         self.net.train()

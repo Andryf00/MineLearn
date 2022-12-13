@@ -23,7 +23,7 @@ class StateManager:
 class ActionManager:
     """Main minecraft action wrapper. Simplifies action space to 130 discrete actions"""
 
-    def __init__(self, device=torch.device('cpu'), c_action_magnitude=22.5):
+    def __init__(self, device, c_action_magnitude=22.5):
         self.device = device
         self.c_action_magnitude = c_action_magnitude
 

@@ -11,10 +11,10 @@ from operator import itemgetter
 
 Transition = namedtuple('Transition', ('pov', 'action', 'reward', 'done'))
 
-
+device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 class Dataset():
-    def __init__(self,action_manager, capacity=1000, device=torch.device('cpu')):
+    def __init__(self,action_manager, device,capacity=1000):
       self.capacity=capacity
       self.size=0
       self.device=device
@@ -41,7 +41,7 @@ class Dataset():
         states[i]=self.transitions[id][0]
         actions[i]=self.transitions[id][1]
         i+=1
-      return states, actions.long()
+      return states.to(device=device), actions.long().to(device)
 
 
     def save(self, path):
