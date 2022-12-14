@@ -10,32 +10,40 @@ import gym
 import time
 from MinecraftWrapper import MinecraftWrapper
 import matplotlib.pyplot as plt
+import numpy as np
+import cv2
+from time import sleep
 
-def train_agent(agent, dataset,save_dir="C:\\Users\\andre\\Desktop\\MineLearn\\models\\", trainsteps=100):
-    for i in range(trainsteps):
-        print("training iteration",i)
+def train_agent(agent, dataset,save_dir="C:\\Users\\andre\\Desktop\\MineLearn\\models\\", epochs=12, train_split=0.8):
+    agent.behaviour_cloning(dataset,epochs=epochs,train_split=train_split)
 
-        agent.learn(i, dataset, write=(i % 1000 == 0))
-
-    agent.save(save_dir, str(trainsteps))
+    agent.save(save_dir, str(epochs))
 
     print("finished TRAINING")
 
 def evaluate_agent(agent, action_manager, steps):
     print("EVALUATION")
-    env_super=gym.make("MineRLTreechop-v0")
+    env_super=gym.make("MineRLObtainDiamond-v0")
     print("ENV CREATED")
-    env_super.seed(0)
+    #change the seed to modify the word
+    env_super.seed(5)
     env=MinecraftWrapper(env_super, action_manager)
     state=env.reset()
     print(state)
-    #state=state['pov']
-    for i in range(steps):
+    steps=0
+    curr_reward=0
+    while(True):
+        steps+=1
         action=agent.act(state.to(device))
-        print(action)
+        #print(action)
         state, reward, done=env.step(action)
-        plt.imshow(state)
-        plt.show()
+        curr_reward+=reward
+        if(reward>0): print(reward)
+        plt_state=state.to('cpu').numpy()
+        cv2.namedWindow("Input", flags=cv2.WINDOW_NORMAL)
+        cv2.imshow("Input", plt_state)
+        cv2.waitKey(50)
+    print("OBTAINED ", curr_reward, "IN", steps, "STEPS")
 
 
 if __name__=='__main__':
@@ -46,9 +54,9 @@ if __name__=='__main__':
     batch_size=32
     learning_rate=0.0000625
     agent = Agent(num_actions, 3, batch_size, learning_rate, device, train=False)
-    agent.load(path="C:\\Users\\andre\\Desktop\\MineLearn\\models\\", id_="2000")
+    agent.load(path="C:\\Users\\andre\\Desktop\\MineLearn\\models\\", id_="25")
     evaluate_agent(agent, action_manager, 1000)
-    capacity=420000
+    capacity=400001
     db=Dataset(action_manager,capacity=capacity, device=device)
     create_db=True
     if(create_db):
@@ -59,5 +67,5 @@ if __name__=='__main__':
     print("DB LOADED")
     agent = Agent(num_actions, 3, batch_size, learning_rate, device)
     print("READY TO TRAIN")
-    train_agent(agent, db,trainsteps=2000)
+    train_agent(agent, db,epochs=12,train_split=0.8)
 

@@ -22,18 +22,16 @@ class MinecraftWrapper(Wrapper):
         assert not self.done
 
         action = self.action_manager.get_action(action)
-
-        if 'craft' in action:
-            if \
-                    action['attack'] == 0 and \
-                    action['craft'] == 0 and \
-                    action['nearbyCraft'] == 0 and \
-                    action['nearbySmelt'] == 0 and \
-                    action['place'] == 0:
-                action['jump'] = 1
-        else:
-            if action['attack'] == 0:
-                action['jump'] = 1
+        action['craft']='none'
+        action['equip']='none'
+        action['nearbyCraft']='none'
+        action['nearbySmelt']='none'
+        action['place']='none'
+        
+        
+        
+        """if action['attack'] == 0:
+            action['jump'] = 1"""
 
         obs, r, self.done, info = super().step(action)
 

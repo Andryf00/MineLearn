@@ -1,65 +1,283 @@
-[15:54:42] [EnvServerSocketHandler/INFO]: [STDOUT]: Received from 127.0.0.1:<MissionInit xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SchemaVersion="" PlatformVersion="0.37.0"><Mission><About><Summary>MineRLTreechop-v0</Summary></About><ModSettings><MsPerTick>50</MsPerTick></ModSettings><ServerSection><ServerInitialConditions><Time><AllowPassageOfTime>false</AllowPassageOfTime></Time><AllowSpawning>true</AllowSpawning></ServerInitialConditions><ServerHandlers><DefaultWorldGenerator forceReset="true" generatorOptions="{     &quot;coordinateScale&quot;: 684.412,     &quot;heightScale&quot;: 684.412,     &quot;lowerLimitScale&quot;: 512.0,     &quot;upperLimitScale&quot;: 512.0,     &quot;depthNoiseScaleX&quot;: 200.0,     &quot;depthNoiseScaleZ&quot;: 200.0,     &quot;depthNoiseScaleExponent&quot;: 0.5,     &quot;mainNoiseScaleX&quot;: 80.0,     &quot;mainNoiseScaleY&quot;: 160.0,     &quot;mainNoiseScaleZ&quot;: 80.0,     &quot;baseSize&quot;: 8.5,     &quot;stretchY&quot;: 12.0,     &quot;biomeDepthWeight&quot;: 1.0,     &quot;biomeDepthOffset&quot;: 0.0,     &quot;biomeScaleWeight&quot;: 1.0,     &quot;biomeScaleOffset&quot;: 0.0,     &quot;seaLevel&quot;: 1,     &quot;useCaves&quot;: false,     &quot;useDungeons&quot;: false,     &quot;dungeonChance&quot;: 8,     &quot;useStrongholds&quot;: false,     &quot;useVillages&quot;: false,     &quot;useMineShafts&quot;: false,     &quot;useTemples&quot;: false,     &quot;useMonuments&quot;: false,     &quot;useMansions&quot;: false,     &quot;useRavines&quot;: false,     &quot;useWaterLakes&quot;: false,     &quot;waterLakeChance&quot;: 4,     &quot;useLavaLakes&quot;: false,     &quot;lavaLakeChance&quot;: 80,     &quot;useLavaOceans&quot;: false,     &quot;fixedBiome&quot;: 4,     &quot;biomeSize&quot;: 4,     &quot;riverSize&quot;: 1,     &quot;dirtSize&quot;: 33,     &quot;dirtCount&quot;: 10,     &quot;dirtMinHeight&quot;: 0,     &quot;dirtMaxHeight&quot;: 256,     &quot;gravelSize&quot;: 33,     &quot;gravelCount&quot;: 8,     &quot;gravelMinHeight&quot;: 0,     &quot;gravelMaxHeight&quot;: 256,     &quot;graniteSize&quot;: 33,     &quot;graniteCount&quot;: 10,     &quot;graniteMinHeight&quot;: 0,     &quot;graniteMaxHeight&quot;: 80,     &quot;dioriteSize&quot;: 33,     &quot;dioriteCount&quot;: 10,     &quot;dioriteMinHeight&quot;: 0,     &quot;dioriteMaxHeight&quot;: 80,     &quot;andesiteSize&quot;: 33,     &quot;andesiteCount&quot;: 10,     &quot;andesiteMinHeight&quot;: 0,     &quot;andesiteMaxHeight&quot;: 80,     &quot;coalSize&quot;: 17,     &quot;coalCount&quot;: 20,     &quot;coalMinHeight&quot;: 0,     &quot;coalMaxHeight&quot;: 128,     &quot;ironSize&quot;: 9,     &quot;ironCount&quot;: 20,     &quot;ironMinHeight&quot;: 0,     &quot;ironMaxHeight&quot;: 64,     &quot;goldSize&quot;: 9,     &quot;goldCount&quot;: 2,     &quot;goldMinHeight&quot;: 0,     &quot;goldMaxHeight&quot;: 32,     &quot;redstoneSize&quot;: 8,     &quot;redstoneCount&quot;: 8,     &quot;redstoneMinHeight&quot;: 0,     &quot;redstoneMaxHeight&quot;: 16,     &quot;diamondSize&quot;: 8,     &quot;diamondCount&quot;: 1,     &quot;diamondMinHeight&quot;: 0,     &quot;diamondMaxHeight&quot;: 16,     &quot;lapisSize&quot;: 7,     &quot;lapisCount&quot;: 1,     &quot;lapisCenterHeight&quot;: 16,     &quot;lapisSpread&quot;: 16 }"/><ServerQuitFromTimeUp timeLimitMs="400000" description="out_of_time"/><ServerQuitWhenAnyAgentFinishes/></ServerHandlers></ServerSection><AgentSection mode="Survival"><Name>MineRLAgent0</Name><AgentStart><Inventory><InventoryObject slot="0" type="iron_axe" metadata="0" quantity="1"/></Inventory></AgentStart><AgentHandlers><FileBasedPerformanceProducer/><ObservationFromDamage/><PauseCommand/><VideoProducer want_depth="false"><Width>64</Width><Height>64</Height></VideoProducer><HumanLevelCommands/><CameraCommands/><RewardForPossessingItem sparse="false" excludeLoops="true"><Item amount="1" reward="1.0" type="log"/></RewardForPossessingItem><AgentQuitFromPossessingItem><Item type="log" amount="64"/></AgentQuitFromPossessingItem></AgentHandlers></AgentSection></Mission><ExperimentUID>074e125d-453b-46f8-a0a0-bc355ff51587</ExperimentUID><ClientRole>0</ClientRole><ClientAgentConnection><ClientIPAddress>127.0.0.1</ClientIPAddress><ClientMissionControlPort>0</ClientMissionControlPort><ClientCommandsPort>0</ClientCommandsPort><AgentIPAddress>127.0.0.1</AgentIPAddress><AgentMissionControlPort>0</AgentMissionControlPort><AgentVideoPort>0</AgentVideoPort><AgentDepthPort>0</AgentDepthPort><AgentLuminancePort>0</AgentLuminancePort><AgentObservationsPort>0</AgentObservationsPort><AgentRewardsPort>0</AgentRewardsPort><AgentColourMapPort>0</AgentColourMapPort></ClientAgentConnection></MissionInit>
-[15:54:43] [EnvServerSocketHandler/INFO]: [STDOUT]: REPLYING WITH: MALMOOK
-[15:54:43] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[15:54:43] [Client thread/INFO]: [STDOUT]: Mission received: MineRLTreechop-v0
-[15:54:43] [Client thread/INFO]: [STDOUT]: CLIENT request state: CREATING_HANDLERS
-[15:54:43] [Client thread/INFO]: [STDOUT]: CLIENT enter state: CREATING_HANDLERS
-[15:54:43] [Client thread/INFO]: [STDOUT]: Starting command server.
-[15:54:43] [Thread-12/INFO]: [STDOUT]: INFO: ->com(0) Listening for messages on port 10592
-[15:54:43] [Client thread/INFO]: [STDOUT]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
-[15:54:43] [Client thread/INFO]: [STDOUT]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
-[15:54:43] [Client thread/INFO]: [STDOUT]: CLIENT request state: CREATING_NEW_WORLD
-[15:54:43] [Client thread/INFO]: [STDOUT]: CLIENT enter state: CREATING_NEW_WORLD
-[15:54:43] [Client thread/INFO]: [STDOUT]: [LOGTOPY] GENERATOR OPTIONS = {     "coordinateScale": 684.412,     "heightScale": 684.412,     "lowerLimitScale": 512.0,     "upperLimitScale": 512.0,     "depthNoiseScaleX": 200.0,     "depthNoiseScaleZ": 200.0,     "depthNoiseScaleExponent": 0.5,     "mainNoiseScaleX": 80.0,     "mainNoiseScaleY": 160.0,     "mainNoiseScaleZ": 80.0,     "baseSize": 8.5,     "stretchY": 12.0,     "biomeDepthWeight": 1.0,     "biomeDepthOffset": 0.0,     "biomeScaleWeight": 1.0,     "biomeScaleOffset": 0.0,     "seaLevel": 1,     "useCaves": false,     "useDungeons": false,     "dungeonChance": 8,     "useStrongholds": false,     "useVillages": false,     "useMineShafts": false,     "useTemples": false,     "useMonuments": false,     "useMansions": false,     "useRavines": false,     "useWaterLakes": false,     "waterLakeChance": 4,     "useLavaLakes": false,     "lavaLakeChance": 80,     "useLavaOceans": false,     "fixedBiome": 4,     "biomeSize": 4,     "riverSize": 1,     "dirtSize": 33,     "dirtCount": 10,     "dirtMinHeight": 0,     "dirtMaxHeight": 256,     "gravelSize": 33,     "gravelCount": 8,     "gravelMinHeight": 0,     "gravelMaxHeight": 256,     "graniteSize": 33,     "graniteCount": 10,     "graniteMinHeight": 0,     "graniteMaxHeight": 80,     "dioriteSize": 33,     "dioriteCount": 10,     "dioriteMinHeight": 0,     "dioriteMaxHeight": 80,     "andesiteSize": 33,     "andesiteCount": 10,     "andesiteMinHeight": 0,     "andesiteMaxHeight": 80,     "coalSize": 17,     "coalCount": 20,     "coalMinHeight": 0,     "coalMaxHeight": 128,     "ironSize": 9,     "ironCount": 20,     "ironMinHeight": 0,     "ironMaxHeight": 64,     "goldSize": 9,     "goldCount": 2,     "goldMinHeight": 0,     "goldMaxHeight": 32,     "redstoneSize": 8,     "redstoneCount": 8,     "redstoneMinHeight": 0,     "redstoneMaxHeight": 16,     "diamondSize": 8,     "diamondCount": 1,     "diamondMinHeight": 0,     "diamondMaxHeight": 16,     "lapisSize": 7,     "lapisCount": 1,     "lapisCenterHeight": 16,     "lapisSpread": 16 }
-[15:54:44] [Client thread/INFO]: Mixing MixinWorldProviderSpawn from mixins.overclocking.malmomod.json into net.minecraft.world.WorldProvider
-[15:54:44] [Server thread/INFO]: Starting integrated minecraft server version 1.11.2
-[15:54:44] [Server thread/INFO]: Generating keypair
-[15:54:44] [Server thread/INFO]: Injecting existing block and item data into this server instance
-[15:54:44] [Server thread/INFO]: Applying holder lookups
-[15:54:44] [Server thread/INFO]: Holder lookups applied
-[15:54:44] [Server thread/INFO]: Loading dimension 0 (TEMP_0_cd8d6a54-6390-4e60-8b58-a2559ca78406) (net.minecraft.server.integrated.IntegratedServer@7c62b9b9)
-[15:54:44] [Server thread/INFO]: Loading dimension 1 (TEMP_0_cd8d6a54-6390-4e60-8b58-a2559ca78406) (net.minecraft.server.integrated.IntegratedServer@7c62b9b9)
-[15:54:44] [Server thread/INFO]: Loading dimension -1 (TEMP_0_cd8d6a54-6390-4e60-8b58-a2559ca78406) (net.minecraft.server.integrated.IntegratedServer@7c62b9b9)
-[15:54:44] [Server thread/INFO]: Preparing start region for level 0
-[15:54:45] [Server thread/INFO]: Preparing spawn area: 19%
-[15:54:46] [Server thread/INFO]: Preparing spawn area: 46%
-[15:54:47] [Server thread/INFO]: Preparing spawn area: 70%
-[15:54:48] [Server thread/INFO]: Changing view distance to 4, from 10
-[15:54:49] [Server thread/INFO]: Mixing MixinLargeInventory from mixins.overclocking.malmomod.json into net.minecraft.entity.player.InventoryPlayer
-[15:54:49] [Netty Local Client IO #0/INFO]: [STDOUT]: Transformed Name: net.minecraft.client.entity.EntityOtherPlayerMP
-[15:54:49] [Netty Local Client IO #0/INFO]: [STDOUT]: MALMO: Found EntityOtherPlayerMP, attempting to transform it
-[15:54:49] [Server thread/INFO]: [STDOUT]: SERVER request state: WAITING_FOR_MOD_READY
-[15:54:49] [Server thread/INFO]: [STDOUT]: CLIENT request state: WAITING_FOR_SERVER_READY
-[15:54:49] [Server thread/INFO]: [STDOUT]: SERVER enter state: WAITING_FOR_MOD_READY
-[15:54:49] [Client thread/INFO]: [STDOUT]: CLIENT enter state: WAITING_FOR_SERVER_READY
-[15:54:49] [Netty Local Client IO #0/INFO]: Server protocol version 2
-[15:54:49] [Netty Server IO #1/INFO]: Client protocol version 2
-[15:54:49] [Netty Server IO #1/INFO]: Client attempting to join with 5 mods : minecraft@1.11.2,FML@8.0.99.99,malmomod@0.37.0,forge@13.20.1.2588,mcp@9.19
-[15:54:49] [Server thread/INFO]: [STDOUT]: SERVER request state: DORMANT
-[15:54:49] [Server thread/INFO]: [STDOUT]: SERVER enter state: DORMANT
-[15:54:49] [Server thread/INFO]: [STDOUT]: INCOMING MISSION: Received MissionInit directly through ServerStateMachine constructor.
-[15:54:49] [Server thread/INFO]: [STDOUT]: Mission received: MineRLTreechop-v0
-[15:54:49] [Server thread/INFO]: Received mission: §9MineRLTreechop-v0
-[15:54:49] [Server thread/INFO]: Source: §a127.0.0.1
-[15:54:49] [Server thread/INFO]: [STDOUT]: SERVER request state: BUILDING_WORLD
-[15:54:49] [Server thread/INFO]: [STDOUT]: SERVER enter state: BUILDING_WORLD
-[15:54:49] [Netty Local Client IO #0/INFO]: [Netty Local Client IO #0] Client side modded connection established
-[15:54:49] [Server thread/INFO]: [STDOUT]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
-[15:54:49] [Server thread/INFO]: [Server thread] Server side modded connection established
-[15:54:49] [Server thread/INFO]: MineRLAgent0[local:E:ebb4b4ad] logged in with entity id 162 at (-237.5, 69.0, 246.5)
-[15:54:49] [Server thread/INFO]: MineRLAgent0 joined the game
-[15:54:49] [Server thread/INFO]: [STDOUT]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
-[15:54:49] [Server thread/INFO]: [STDOUT]: Experiment requires: 
-[15:54:49] [Server thread/INFO]: [STDOUT]: >>>> MineRLAgent0
-[15:54:50] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
-[15:54:50] [Server thread/INFO]: [STDOUT]: Initializing player with username MineRLAgent0 and agentname MineRLAgent0
-[15:54:50] [Client thread/INFO]: Mixing MixinRandomSkinTexture from mixins.overclocking.malmomod.json into net.minecraft.client.resources.DefaultPlayerSkin
-[15:54:50] [Client thread/INFO]: [STDOUT]: CLIENT request state: RUNNING
-[15:54:50] [Client thread/INFO]: [STDOUT]: CLIENT enter state: RUNNING
-[15:54:50] [Server thread/INFO]: [STDOUT]: SERVER request state: RUNNING
-[15:54:50] [Client thread/INFO]: [STDOUT]: Preparing reward com.microsoft.Malmo.MissionHandlers.RewardForPossessingItemImplementation@4ef14401 with agent name MineRLAgent0
-[15:54:50] [Server thread/INFO]: [STDOUT]: SERVER enter state: RUNNING
-[15:54:50] [Client thread/INFO]: [STDOUT]: [LOGTOPY] On Mac OSX Catalina make sure to install this OpenJDK 1.8.0_152-release-1056-b12, this prevents the NSDragRegions crash
-[15:54:50] [Client thread/INFO]: [STDOUT]: Resized the window
-[15:54:50] [Client thread/INFO]: [STDOUT]: Unpausing
-[15:54:55] [Server thread/INFO]: [STDOUT]: Warning: managed 5/20 ticks this second.
+[20:12:22] [EnvServerSocketHandler/INFO]: [STDOUT]: Received from 127.0.0.1:<MissionInit xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SchemaVersion="" PlatformVersion="0.37.0"><Mission><About><Summary>MineRLTreechop-v0</Summary></About><ModSettings><MsPerTick>50</MsPerTick></ModSettings><ServerSection><ServerInitialConditions><Time><AllowPassageOfTime>false</AllowPassageOfTime></Time><AllowSpawning>true</AllowSpawning></ServerInitialConditions><ServerHandlers><DefaultWorldGenerator forceReset="true" generatorOptions="{     &quot;coordinateScale&quot;: 684.412,     &quot;heightScale&quot;: 684.412,     &quot;lowerLimitScale&quot;: 512.0,     &quot;upperLimitScale&quot;: 512.0,     &quot;depthNoiseScaleX&quot;: 200.0,     &quot;depthNoiseScaleZ&quot;: 200.0,     &quot;depthNoiseScaleExponent&quot;: 0.5,     &quot;mainNoiseScaleX&quot;: 80.0,     &quot;mainNoiseScaleY&quot;: 160.0,     &quot;mainNoiseScaleZ&quot;: 80.0,     &quot;baseSize&quot;: 8.5,     &quot;stretchY&quot;: 12.0,     &quot;biomeDepthWeight&quot;: 1.0,     &quot;biomeDepthOffset&quot;: 0.0,     &quot;biomeScaleWeight&quot;: 1.0,     &quot;biomeScaleOffset&quot;: 0.0,     &quot;seaLevel&quot;: 1,     &quot;useCaves&quot;: false,     &quot;useDungeons&quot;: false,     &quot;dungeonChance&quot;: 8,     &quot;useStrongholds&quot;: false,     &quot;useVillages&quot;: false,     &quot;useMineShafts&quot;: false,     &quot;useTemples&quot;: false,     &quot;useMonuments&quot;: false,     &quot;useMansions&quot;: false,     &quot;useRavines&quot;: false,     &quot;useWaterLakes&quot;: false,     &quot;waterLakeChance&quot;: 4,     &quot;useLavaLakes&quot;: false,     &quot;lavaLakeChance&quot;: 80,     &quot;useLavaOceans&quot;: false,     &quot;fixedBiome&quot;: 4,     &quot;biomeSize&quot;: 4,     &quot;riverSize&quot;: 1,     &quot;dirtSize&quot;: 33,     &quot;dirtCount&quot;: 10,     &quot;dirtMinHeight&quot;: 0,     &quot;dirtMaxHeight&quot;: 256,     &quot;gravelSize&quot;: 33,     &quot;gravelCount&quot;: 8,     &quot;gravelMinHeight&quot;: 0,     &quot;gravelMaxHeight&quot;: 256,     &quot;graniteSize&quot;: 33,     &quot;graniteCount&quot;: 10,     &quot;graniteMinHeight&quot;: 0,     &quot;graniteMaxHeight&quot;: 80,     &quot;dioriteSize&quot;: 33,     &quot;dioriteCount&quot;: 10,     &quot;dioriteMinHeight&quot;: 0,     &quot;dioriteMaxHeight&quot;: 80,     &quot;andesiteSize&quot;: 33,     &quot;andesiteCount&quot;: 10,     &quot;andesiteMinHeight&quot;: 0,     &quot;andesiteMaxHeight&quot;: 80,     &quot;coalSize&quot;: 17,     &quot;coalCount&quot;: 20,     &quot;coalMinHeight&quot;: 0,     &quot;coalMaxHeight&quot;: 128,     &quot;ironSize&quot;: 9,     &quot;ironCount&quot;: 20,     &quot;ironMinHeight&quot;: 0,     &quot;ironMaxHeight&quot;: 64,     &quot;goldSize&quot;: 9,     &quot;goldCount&quot;: 2,     &quot;goldMinHeight&quot;: 0,     &quot;goldMaxHeight&quot;: 32,     &quot;redstoneSize&quot;: 8,     &quot;redstoneCount&quot;: 8,     &quot;redstoneMinHeight&quot;: 0,     &quot;redstoneMaxHeight&quot;: 16,     &quot;diamondSize&quot;: 8,     &quot;diamondCount&quot;: 1,     &quot;diamondMinHeight&quot;: 0,     &quot;diamondMaxHeight&quot;: 16,     &quot;lapisSize&quot;: 7,     &quot;lapisCount&quot;: 1,     &quot;lapisCenterHeight&quot;: 16,     &quot;lapisSpread&quot;: 16 }"/><ServerQuitFromTimeUp timeLimitMs="400000" description="out_of_time"/><ServerQuitWhenAnyAgentFinishes/></ServerHandlers></ServerSection><AgentSection mode="Survival"><Name>MineRLAgent0</Name><AgentStart><Inventory><InventoryObject slot="0" type="iron_axe" metadata="0" quantity="1"/></Inventory></AgentStart><AgentHandlers><FileBasedPerformanceProducer/><ObservationFromDamage/><PauseCommand/><VideoProducer want_depth="false"><Width>64</Width><Height>64</Height></VideoProducer><HumanLevelCommands/><CameraCommands/><RewardForPossessingItem sparse="false" excludeLoops="true"><Item amount="1" reward="1.0" type="log"/></RewardForPossessingItem><AgentQuitFromPossessingItem><Item type="log" amount="64"/></AgentQuitFromPossessingItem></AgentHandlers></AgentSection></Mission><ExperimentUID>170dacee-231e-4b48-b034-d99db2ca9ad4</ExperimentUID><ClientRole>0</ClientRole><ClientAgentConnection><ClientIPAddress>127.0.0.1</ClientIPAddress><ClientMissionControlPort>0</ClientMissionControlPort><ClientCommandsPort>0</ClientCommandsPort><AgentIPAddress>127.0.0.1</AgentIPAddress><AgentMissionControlPort>0</AgentMissionControlPort><AgentVideoPort>0</AgentVideoPort><AgentDepthPort>0</AgentDepthPort><AgentLuminancePort>0</AgentLuminancePort><AgentObservationsPort>0</AgentObservationsPort><AgentRewardsPort>0</AgentRewardsPort><AgentColourMapPort>0</AgentColourMapPort></ClientAgentConnection></MissionInit>
+[20:12:23] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[20:12:23] [EnvServerSocketHandler/INFO]: [STDOUT]: REPLYING WITH: MALMOOK
+[20:12:23] [Client thread/INFO]: [STDOUT]: Mission received: MineRLTreechop-v0
+[20:12:23] [Client thread/INFO]: [STDOUT]: CLIENT request state: CREATING_HANDLERS
+[20:12:23] [Client thread/INFO]: [STDOUT]: CLIENT enter state: CREATING_HANDLERS
+[20:12:23] [Client thread/INFO]: [STDOUT]: Starting command server.
+[20:12:23] [Thread-12/INFO]: [STDOUT]: INFO: ->com(0) Listening for messages on port 10156
+[20:12:23] [Client thread/INFO]: [STDOUT]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[20:12:23] [Client thread/INFO]: [STDOUT]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[20:12:23] [Client thread/INFO]: [STDOUT]: CLIENT request state: CREATING_NEW_WORLD
+[20:12:23] [Client thread/INFO]: [STDOUT]: CLIENT enter state: CREATING_NEW_WORLD
+[20:12:23] [Client thread/INFO]: [STDOUT]: [LOGTOPY] GENERATOR OPTIONS = {     "coordinateScale": 684.412,     "heightScale": 684.412,     "lowerLimitScale": 512.0,     "upperLimitScale": 512.0,     "depthNoiseScaleX": 200.0,     "depthNoiseScaleZ": 200.0,     "depthNoiseScaleExponent": 0.5,     "mainNoiseScaleX": 80.0,     "mainNoiseScaleY": 160.0,     "mainNoiseScaleZ": 80.0,     "baseSize": 8.5,     "stretchY": 12.0,     "biomeDepthWeight": 1.0,     "biomeDepthOffset": 0.0,     "biomeScaleWeight": 1.0,     "biomeScaleOffset": 0.0,     "seaLevel": 1,     "useCaves": false,     "useDungeons": false,     "dungeonChance": 8,     "useStrongholds": false,     "useVillages": false,     "useMineShafts": false,     "useTemples": false,     "useMonuments": false,     "useMansions": false,     "useRavines": false,     "useWaterLakes": false,     "waterLakeChance": 4,     "useLavaLakes": false,     "lavaLakeChance": 80,     "useLavaOceans": false,     "fixedBiome": 4,     "biomeSize": 4,     "riverSize": 1,     "dirtSize": 33,     "dirtCount": 10,     "dirtMinHeight": 0,     "dirtMaxHeight": 256,     "gravelSize": 33,     "gravelCount": 8,     "gravelMinHeight": 0,     "gravelMaxHeight": 256,     "graniteSize": 33,     "graniteCount": 10,     "graniteMinHeight": 0,     "graniteMaxHeight": 80,     "dioriteSize": 33,     "dioriteCount": 10,     "dioriteMinHeight": 0,     "dioriteMaxHeight": 80,     "andesiteSize": 33,     "andesiteCount": 10,     "andesiteMinHeight": 0,     "andesiteMaxHeight": 80,     "coalSize": 17,     "coalCount": 20,     "coalMinHeight": 0,     "coalMaxHeight": 128,     "ironSize": 9,     "ironCount": 20,     "ironMinHeight": 0,     "ironMaxHeight": 64,     "goldSize": 9,     "goldCount": 2,     "goldMinHeight": 0,     "goldMaxHeight": 32,     "redstoneSize": 8,     "redstoneCount": 8,     "redstoneMinHeight": 0,     "redstoneMaxHeight": 16,     "diamondSize": 8,     "diamondCount": 1,     "diamondMinHeight": 0,     "diamondMaxHeight": 16,     "lapisSize": 7,     "lapisCount": 1,     "lapisCenterHeight": 16,     "lapisSpread": 16 }
+[20:12:23] [Client thread/INFO]: Mixing MixinWorldProviderSpawn from mixins.overclocking.malmomod.json into net.minecraft.world.WorldProvider
+[20:12:24] [Server thread/INFO]: Starting integrated minecraft server version 1.11.2
+[20:12:24] [Server thread/INFO]: Generating keypair
+[20:12:24] [Server thread/INFO]: Injecting existing block and item data into this server instance
+[20:12:24] [Server thread/INFO]: Applying holder lookups
+[20:12:24] [Server thread/INFO]: Holder lookups applied
+[20:12:24] [Server thread/INFO]: Loading dimension 0 (TEMP_0_388ebb40-f10d-4193-ba06-3cd54b39caad) (net.minecraft.server.integrated.IntegratedServer@7bcdf446)
+[20:12:24] [Server thread/INFO]: Loading dimension 1 (TEMP_0_388ebb40-f10d-4193-ba06-3cd54b39caad) (net.minecraft.server.integrated.IntegratedServer@7bcdf446)
+[20:12:24] [Server thread/INFO]: Loading dimension -1 (TEMP_0_388ebb40-f10d-4193-ba06-3cd54b39caad) (net.minecraft.server.integrated.IntegratedServer@7bcdf446)
+[20:12:24] [Server thread/INFO]: Preparing start region for level 0
+[20:12:25] [Server thread/INFO]: Preparing spawn area: 19%
+[20:12:26] [Server thread/INFO]: Preparing spawn area: 42%
+[20:12:27] [Server thread/INFO]: Preparing spawn area: 67%
+[20:12:28] [Server thread/INFO]: Preparing spawn area: 94%
+[20:12:28] [Server thread/INFO]: Changing view distance to 4, from 10
+[20:12:29] [Server thread/INFO]: Mixing MixinLargeInventory from mixins.overclocking.malmomod.json into net.minecraft.entity.player.InventoryPlayer
+[20:12:29] [Netty Local Client IO #0/INFO]: [STDOUT]: Transformed Name: net.minecraft.client.entity.EntityOtherPlayerMP
+[20:12:29] [Netty Local Client IO #0/INFO]: [STDOUT]: MALMO: Found EntityOtherPlayerMP, attempting to transform it
+[20:12:29] [Server thread/INFO]: [STDOUT]: SERVER request state: WAITING_FOR_MOD_READY
+[20:12:29] [Server thread/INFO]: [STDOUT]: CLIENT request state: WAITING_FOR_SERVER_READY
+[20:12:29] [Netty Local Client IO #0/INFO]: Server protocol version 2
+[20:12:29] [Netty Server IO #1/INFO]: Client protocol version 2
+[20:12:29] [Netty Server IO #1/INFO]: Client attempting to join with 5 mods : minecraft@1.11.2,FML@8.0.99.99,malmomod@0.37.0,forge@13.20.1.2588,mcp@9.19
+[20:12:29] [Netty Local Client IO #0/INFO]: [Netty Local Client IO #0] Client side modded connection established
+[20:12:29] [Server thread/INFO]: [STDOUT]: SERVER enter state: WAITING_FOR_MOD_READY
+[20:12:29] [Client thread/INFO]: [STDOUT]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[20:12:29] [Server thread/INFO]: [Server thread] Server side modded connection established
+[20:12:29] [Server thread/INFO]: MineRLAgent0[local:E:75a044b5] logged in with entity id 170 at (-5.5, 59.0, 240.5)
+[20:12:29] [Server thread/INFO]: MineRLAgent0 joined the game
+[20:12:29] [Server thread/INFO]: [STDOUT]: SERVER request state: DORMANT
+[20:12:29] [Server thread/INFO]: [STDOUT]: SERVER enter state: DORMANT
+[20:12:29] [Server thread/INFO]: [STDOUT]: INCOMING MISSION: Received MissionInit directly through ServerStateMachine constructor.
+[20:12:29] [Server thread/INFO]: [STDOUT]: Mission received: MineRLTreechop-v0
+[20:12:29] [Server thread/INFO]: Received mission: §9MineRLTreechop-v0
+[20:12:29] [Server thread/INFO]: Source: §a127.0.0.1
+[20:12:29] [Server thread/INFO]: [STDOUT]: SERVER request state: BUILDING_WORLD
+[20:12:29] [Server thread/INFO]: [STDOUT]: SERVER enter state: BUILDING_WORLD
+[20:12:29] [Server thread/INFO]: [STDOUT]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[20:12:30] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
+[20:12:30] [Server thread/INFO]: [STDOUT]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[20:12:30] [Server thread/INFO]: [STDOUT]: Experiment requires: 
+[20:12:30] [Server thread/INFO]: [STDOUT]: >>>> MineRLAgent0
+[20:12:30] [Client thread/INFO]: Mixing MixinRandomSkinTexture from mixins.overclocking.malmomod.json into net.minecraft.client.resources.DefaultPlayerSkin
+[20:12:30] [Client thread/INFO]: [CHAT] Received mission: §9MineRLTreechop-v0
+[20:12:30] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[20:12:30] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
+[20:12:30] [Server thread/INFO]: [STDOUT]: Initializing player with username MineRLAgent0 and agentname MineRLAgent0
+[20:12:30] [Client thread/INFO]: [STDOUT]: CLIENT request state: RUNNING
+[20:12:30] [Client thread/INFO]: [STDOUT]: CLIENT enter state: RUNNING
+[20:12:30] [Client thread/INFO]: [STDOUT]: Preparing reward com.microsoft.Malmo.MissionHandlers.RewardForPossessingItemImplementation@5144451c with agent name MineRLAgent0
+[20:12:30] [Server thread/INFO]: [STDOUT]: SERVER request state: RUNNING
+[20:12:30] [Client thread/INFO]: [STDOUT]: [LOGTOPY] On Mac OSX Catalina make sure to install this OpenJDK 1.8.0_152-release-1056-b12, this prevents the NSDragRegions crash
+[20:12:30] [Server thread/INFO]: [STDOUT]: SERVER enter state: RUNNING
+[20:12:30] [Client thread/INFO]: [STDOUT]: Resized the window
+[20:12:30] [Client thread/INFO]: [STDOUT]: Unpausing
+[20:12:34] [Server thread/INFO]: [STDOUT]: Warning: managed 4/20 ticks this second.
+[20:12:35] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:37] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:38] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:39] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:40] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:41] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:42] [Server thread/INFO]: [STDOUT]: Warning: managed 12/20 ticks this second.
+[20:12:43] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:12:44] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+[20:12:45] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:46] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 2
+[20:12:47] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:48] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 3
+[20:12:49] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:50] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 4
+[20:12:51] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:52] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 5
+[20:12:53] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 6
+[20:12:54] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:55] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:56] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:57] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:12:58] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:12:59] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:00] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:13:01] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:02] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 7
+[20:13:03] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 8
+[20:13:04] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:05] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:06] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:13:07] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:08] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:09] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 9
+[20:13:11] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:13:12] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 10
+[20:13:13] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 11
+[20:13:14] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:15] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 12
+[20:13:16] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:17] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 13
+[20:13:18] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:19] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:20] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:21] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:22] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:23] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+[20:13:24] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:25] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:13:26] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 14
+[20:13:27] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:28] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 15
+[20:13:29] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 16
+[20:13:31] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:32] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:13:33] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 17
+[20:13:34] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 18
+[20:13:35] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 19
+[20:13:36] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:37] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:38] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:39] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 20
+[20:13:40] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 21
+[20:13:41] [Server thread/INFO]: [STDOUT]: Warning: managed 11/20 ticks this second.
+[20:13:42] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:43] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 22
+[20:13:44] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 23
+[20:13:45] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 24
+[20:13:46] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 25
+[20:13:47] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:48] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:13:49] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:13:50] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 26
+[20:13:51] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 27
+[20:13:52] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:53] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 28
+[20:13:55] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:56] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:57] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:13:58] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 29
+[20:13:59] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:00] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:01] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:02] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:03] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:04] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:05] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:06] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:07] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:08] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:09] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:14:10] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:11] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:12] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:13] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:14] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:15] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:16] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:17] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:18] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:19] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:20] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:21] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:22] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:23] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:24] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:25] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:26] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[20:14:27] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:29] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:30] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:31] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 30
+[20:14:32] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:33] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 31
+[20:14:34] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:35] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 32
+[20:14:36] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:37] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 33
+[20:14:38] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:39] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:40] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:41] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:42] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:43] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:44] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 34
+[20:14:45] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 35
+[20:14:46] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:47] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:48] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:49] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:50] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:51] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:52] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:53] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:54] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:14:56] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:57] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:58] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:14:59] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:15:00] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:15:01] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 36
+[20:15:02] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 37
+[20:15:03] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 38
+[20:15:04] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:15:05] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 39
+RewardForPossessingItemImplementation - MineRLAgent0: 2
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+[20:15:06] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 40
+[20:15:07] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:15:08] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:15:09] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:15:10] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 41
+[20:15:11] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:15:12] [Server thread/INFO]: [STDOUT]: Warning: managed 16/20 ticks this second.
+[20:15:13] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 42
+[20:15:14] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:15:15] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:15:16] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 43
+[20:15:17] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:15:18] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 44
+[20:15:19] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 45
+[20:15:20] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 46
+RewardForPossessingItemImplementation - MineRLAgent0: 47
+[20:15:21] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+[20:15:22] [Server thread/INFO]: [STDOUT]: Warning: managed 15/20 ticks this second.
+[20:15:23] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+Terminare il processo batch (S/N)? 

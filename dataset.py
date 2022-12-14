@@ -31,24 +31,11 @@ class Dataset():
       self.transitions[self.index]=Transition(torch_img, action_id, reward, not done)
       self.index+=1
 
-    #def get():
-    def sample_state_act(self, batch_size):
-      indexs=random.sample(range(0, self.index), batch_size)
-      states=torch.Tensor(size=[batch_size,3,64,64])
-      actions=torch.Tensor(size=[batch_size])
-      i=0
-      for id in indexs:
-        states[i]=self.transitions[id][0]
-        actions[i]=self.transitions[id][1]
-        i+=1
-      return states.to(device=device), actions.long().to(device)
-
-
     def save(self, path):
-        pickle.dump([self.index, self.size, self.transitions], open(path, 'wb'))
+      
+      pickle.dump([self.index, self.size, self.transitions], open(path, 'wb'))
 
     def load(self, path):
         self.index, self.size, self.transitions \
              = pickle.load(open(path, "rb"))
-        self.transitions=np.array(self.transitions)
 
