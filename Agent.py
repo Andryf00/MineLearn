@@ -2,14 +2,14 @@ import numpy as np
 import torch
 from torch import optim
 import torch.nn.functional as F
-from Network import Network
+from Network import Network, vec_Network
 
 from os.path import join as p_join
 from torch.utils.data import DataLoader
 
 
 class Agent:
-    def __init__(self, num_actions, image_channels, batch_size, learning_rate, device, train=True):
+    def __init__(self, num_actions, image_channels, batch_size, learning_rate, device, train=True, vec=False):
         self.num_actions = num_actions
         #self.writer = writer
         self.device=device
@@ -31,22 +31,32 @@ class Agent:
                                    118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129]
             # this id list can be received by running get_left_right_reversed_mapping() from the ActionManager
         """
-
-        self.net = Network(image_channels, num_actions).to(device=device)
+        if vec:
+            self.net=vec_Network().to(device)
+        else:
+            self.net = Network(image_channels, num_actions).to(device=device)
         if(train):
             self.net.train()
         self.optimizer = optim.Adam(self.net.parameters(), lr=learning_rate, weight_decay=1e-5)
 
-    def act(self, img):
+    def act(self, img, vec=False):
         with torch.no_grad():
             #print("ACT IMG",img.size())
-            img=torch.permute(torch.unsqueeze(img,0), [0,3,1,2])
+            if(not vec):
+                img=torch.permute(torch.unsqueeze(img,0), [0,3,1,2])
+                dim=1
+            else: dim=-1
             #print(img.size())
             logits = self.net(img.type(torch.FloatTensor).to(self.device))#, vec)
-            probs = F.softmax(logits, 1).detach().cpu().numpy()
-
-            actions = [np.random.choice(len(p), p=p) for p in probs]#?? sample from prob distribution
-
+            #if vec:print("OUTPUT",logits)
+            probs = F.softmax(logits,dim).detach().cpu().numpy()
+            #if vec:print("PROBS", probs)
+            if(not vec):actions = [np.random.choice(len(p), p=p) for p in probs]#?? sample from prob distribution
+           
+            else:
+                craft_actions=[x for x in range(112, 130)] 
+                actions=[np.random.choice(craft_actions, p=probs[craft_actions]/np.sum(probs[craft_actions]))]
+            #if vec:print("ACTION", actions[0])
             assert len(actions) == 1  # only used with batchsize 1
 
             return actions[0]
@@ -55,33 +65,32 @@ class Agent:
         running_loss = 0.
         last_loss = 0.
         for i in range(0,train_size-32,32):
-            inputs=torch.Tensor(size=[32,3,64,64])
+            inputs=torch.Tensor(size=[32,18])
             targets=torch.Tensor(size=[32])
-            #there must be a better way to do this?
-            roba=self.train_dataset[i:i+32]
-            print(roba)
+            #there must be a better way to do this
             for j in range(32):
                 try:
+                    #print(self.train_dataset[i+j][0])
                     inputs[j]=self.train_dataset[i+j][0]
                     targets[j]=self.train_dataset[i+j][1]  
                 except Exception:
-                    print("err")
-                    print(self.train_dataset[i+j])
+                    #print("err")
+                    #print(self.train_dataset[i+j])
                     inputs[j]=self.train_dataset[i+j-1][0]
                     targets[j]=self.train_dataset[i+j-1][1]                      
                     j-=1
                     i+=1
             self.optimizer.zero_grad()
-
+            #print("INPUT", inputs)
             outputs = self.net(inputs.to(device=self.device))
-
+            #print("OUTPUT",outputs)
             loss = F.cross_entropy(outputs, targets.type(torch.LongTensor).to(self.device))
             loss.backward()
 
             self.optimizer.step()
 
             running_loss += loss.item()
-            if i%992*50==0:print("step nr.",i,"curr_loss", running_loss/(i+1))
+            if i%(992*1)==0:print("step nr.",i,"curr_loss", running_loss/(i+1))
             """if i % 1000 == 999:
                 last_loss = running_loss / 1000 # loss per batch
                 print('  batch {} loss: {}'.format(i + 1, last_loss))
@@ -105,7 +114,7 @@ class Agent:
             # Make sure gradient tracking is on, and do a pass over the data
             self.train()
             avg_loss=0
-            #avg_loss = self.train_one_epoch(epoch, train_size)
+            avg_loss = self.train_one_epoch(epoch, train_size)
 
             # We don't need gradients on to do reporting
             self.train(False)

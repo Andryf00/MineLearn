@@ -6,9 +6,29 @@ import numpy as np
 
 import math
 
+class vec_Network(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc_vec = nn.Linear(in_features= 18,out_features= 130)
+    def forward(self, x):
+        #print("X",x)
+        x=self.fc_vec(x)
+        x=F.relu(x)
+        return x
+"""
+class vec_Network(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc1 = nn.Linear(in_features= 18,out_features= 64)
+        self.fc2 =  nn.Linear(in_features= 64,out_features= 130)
+    def forward(self, x):
+        #print("X",x)
+        x=self.fc1(x)
+        x=F.relu(x)
+        x=self.fc2(x)
+        x=F.relu(x)
+        return x"""
 
-
-        
 class Network(nn.Module):
     class _ImpalaResidual(nn.Module):
 

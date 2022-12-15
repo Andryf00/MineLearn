@@ -1,7 +1,7 @@
 import minerl
 from collections import deque
 from copy import deepcopy
-
+from operator import itemgetter
 from dataset import Transition
 
 from collections import OrderedDict
@@ -10,7 +10,7 @@ from collections import OrderedDict
 def put_data_into_dataset(action_manager, dataset, minecraft_human_data_dir,
                           continuous_action_stacking_amount=3,
                           only_successful=True, max_duration_steps=None, max_reward=256.,
-                          test=False,env_name="MineRLTreechop-v0"):
+                          test=False,env_name="MineRLObtainDiamond-v0"):
     """
     :param env_name: Minecraft env name
     :param action_manager: expects object of data_manager.ActionManager
@@ -38,13 +38,23 @@ def put_data_into_dataset(action_manager, dataset, minecraft_human_data_dir,
         assert type(a_id) == int
         return a_id == 0  # no_op action has id of 0
 
+    def process_sample_inv(sample, last_reward):
+        """adding single sample to dataset if all conditions are met, expects sample with already stacked
+        camera action"""
+        
+        reward = sample[2]
+        
+        dataset.append_sample_inv(sample)
+        counter_change = 1
+
+        return counter_change, reward
+
     def process_sample(sample, last_reward):
         """adding single sample to dataset if all conditions are met, expects sample with already stacked
         camera action"""
-
+        
         reward = sample[2]
-
-
+        
         
         if reward != 0.:
             dataset.append_sample(sample)
@@ -57,7 +67,7 @@ def put_data_into_dataset(action_manager, dataset, minecraft_human_data_dir,
             else:
                 counter_change = 0
 
-        return counter_change, last_reward
+        return counter_change, reward
 
     data = minerl.data.make(env_name, data_dir=minecraft_human_data_dir)
     #data=data.filter(lambda meta: meta['succes']==True) might be useful, from 
@@ -72,17 +82,21 @@ def put_data_into_dataset(action_manager, dataset, minecraft_human_data_dir,
     #initial_sample_amount = dataset.transitions.current_size()
     print(dataset.index,dataset.capacity)
     finished=False
+    last_sample=0
     for n, traj in enumerate(trajs):
         if finished: break
         print("AGUGA",dataset.index,dataset.capacity)
         for j, sample in enumerate(data.load_data(traj, include_metadata=True)):
-
+            """print(sample[0]['inventory'])
+            print(sample[0]['inventory']['wooden_pickaxe'])"""
+            
             if(dataset.index==dataset.capacity-1-continuous_action_stacking_amount):
                 finished=True
                 print("YAAAAAAAAA")
                 break
             # at first we check if the trajectory will be used :
             if j == 0:
+                last_sample=sample
                 print(sample[-1])
 
                 if not is_success(sample):
@@ -103,17 +117,35 @@ def put_data_into_dataset(action_manager, dataset, minecraft_human_data_dir,
 
                     if sample_que[i][2] != 0.:  # (if reward != 0)
                         break  # no camera action stacking after a reward
+                #if(sample_que[0][0]['inventory']['crafting_table','furnace','iron_pickaxe','planks','stick', 'stone_pickaxe','torch','wooden_pickaxe']!=last_sample[0]['inventory'][]):
+                if(
+                    sample_que[0][1]['craft']=="stick" or sample_que[0][1]['craft']== "planks" or sample_que[0][1]['craft']== "crafting_table"
+                    or sample_que[0][1]['nearbyCraft']=='wooden_pickaxe'
+                    or sample_que[0][1]['place']=='crafting_table'):
+                    """
+                    itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1])!=('none','none','none','none','none')
+                        and itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1])!=('none','none','none','none','torch')
+                        and itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1])!=('none','none','none','none','cobblestone')
+                        and itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1])!=('none','none','none','none','stone')
+                        and itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1])!=('torch','none','none','none','none')):
+                    print(j,itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1]))"""
+                    added_samples, last_reward = process_sample_inv(sample_que[0], last_reward)
+                    added_sample_counter += added_samples
 
-                added_samples, last_reward = process_sample(sample_que[0], last_reward)
+                last_sample=sample_que[0]
+            """TO SELECT ONLY TREE CHOP DATA FROM OBTAIN DIAMOND
+            if(last_reward>=2):
+                print("stopping traj")
+                break"""
+        
 
-                added_sample_counter += added_samples
-
-        if len(sample_que) > 0:  # otherwise not successful traj
+            #not need for vecs
+            """if len(sample_que) > 0:  # otherwise not successful traj
             # for the last samples in the queue we don't stack the the camera actions
             for i in range(1, continuous_action_stacking_amount):
                 added_samples, last_reward = process_sample(sample_que[i], last_reward)
                 added_sample_counter += added_samples
-
+            """
             # a terminal state could be reached without exceeding max_reward:
             #added_sample_counter -= dataset.remove_new_data()
 

@@ -31,8 +31,18 @@ class Dataset():
       self.transitions[self.index]=Transition(torch_img, action_id, reward, not done)
       self.index+=1
 
-    def save(self, path):
+    def append_sample_inv(self, sample):
+      state, action, reward, done = sample[0], sample[1], sample[2], sample[4]
       
+      inv=list(state['inventory'].values())
+      print(inv)
+      action_id = self.action_manager.get_id(action)
+      torch_vec = torch.Tensor(inv)
+      self.transitions[self.index]=Transition(torch_vec, action_id, reward, not done)
+      self.index+=1
+
+    def save(self, path):
+      print(self.index)
       pickle.dump([self.index, self.size, self.transitions], open(path, 'wb'))
 
     def load(self, path):
