@@ -85,6 +85,8 @@ def put_data_into_dataset(action_manager, dataset, minecraft_human_data_dir,
     last_sample=0
     for n, traj in enumerate(trajs):
         if finished: break
+        start=False
+        finish=False
         print("AGUGA",dataset.index,dataset.capacity)
         for j, sample in enumerate(data.load_data(traj, include_metadata=True)):
             """print(sample[0]['inventory'])
@@ -118,21 +120,26 @@ def put_data_into_dataset(action_manager, dataset, minecraft_human_data_dir,
                     if sample_que[i][2] != 0.:  # (if reward != 0)
                         break  # no camera action stacking after a reward
                 #if(sample_que[0][0]['inventory']['crafting_table','furnace','iron_pickaxe','planks','stick', 'stone_pickaxe','torch','wooden_pickaxe']!=last_sample[0]['inventory'][]):
+                """TO SELECT ONLY CRAFTING WOOD DATA FROM OBTAIN D
                 if(
                     sample_que[0][1]['craft']=="stick" or sample_que[0][1]['craft']== "planks" or sample_que[0][1]['craft']== "crafting_table"
                     or sample_que[0][1]['nearbyCraft']=='wooden_pickaxe'
                     or sample_que[0][1]['place']=='crafting_table'):
-                    """
-                    itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1])!=('none','none','none','none','none')
-                        and itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1])!=('none','none','none','none','torch')
-                        and itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1])!=('none','none','none','none','cobblestone')
-                        and itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1])!=('none','none','none','none','stone')
-                        and itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1])!=('torch','none','none','none','none')):
-                    print(j,itemgetter('craft','equip','nearbyCraft','nearbySmelt','place')(sample_que[0][1]))"""
+                    added_samples, last_reward = process_sample_inv(sample_que[0], last_reward)
+                    added_sample_counter += added_samples"""
+                """TOO SELECT ONLY DATA WHEN WOODEN PICKAXE IS EQUIPPED
+                if sample_que[0][0]["inventory"]['wooden_pickaxe']!=0 and not start: start=True
+                if sample_que[0][0]["inventory"]['furnace']!=0 and start: finish=True
+                if(start and not finish):
+                    added_samples, last_reward = process_sample(sample_que[0], last_reward)
+                    added_sample_counter += added_samples 
+                """
+                if(
+                    sample_que[0][1]['craft']=="stick" or sample_que[0][1]['craft']== "crafting_table"
+                    or sample_que[0][1]['nearbyCraft']=='stone_pickaxe'or sample_que[0][1]['nearbyCraft']=='furnace'
+                    or sample_que[0][1]['place']=='crafting_table'):
                     added_samples, last_reward = process_sample_inv(sample_que[0], last_reward)
                     added_sample_counter += added_samples
-
-                last_sample=sample_que[0]
             """TO SELECT ONLY TREE CHOP DATA FROM OBTAIN DIAMOND
             if(last_reward>=2):
                 print("stopping traj")

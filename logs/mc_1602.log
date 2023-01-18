@@ -1,0 +1,95 @@
+[09:33:04] [EnvServerSocketHandler/INFO]: [STDOUT]: Received from 127.0.0.1:<MissionInit xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SchemaVersion="" PlatformVersion="0.37.0"><Mission><About><Summary>MineRLObtainIronPickaxe-v0</Summary></About><ModSettings><MsPerTick>50</MsPerTick></ModSettings><ServerSection><ServerInitialConditions><Time><StartTime>6000</StartTime><AllowPassageOfTime>true</AllowPassageOfTime></Time><AllowSpawning>true</AllowSpawning></ServerInitialConditions><ServerHandlers><DefaultWorldGenerator forceReset="true" generatorOptions="{}"/><ServerQuitFromTimeUp timeLimitMs="300000" description="out_of_time"/><ServerQuitWhenAnyAgentFinishes/></ServerHandlers></ServerSection><AgentSection mode="Survival"><Name>MineRLAgent0</Name><AgentStart/><AgentHandlers><FileBasedPerformanceProducer/><ObservationFromDamage/><PauseCommand/><VideoProducer want_depth="false"><Width>64</Width><Height>64</Height></VideoProducer><ObservationFromFullInventory flat="false"/><ObservationFromEquippedItem/><HumanLevelCommands/><CameraCommands/><PlaceCommands/><EquipCommands/><SimpleCraftCommands/><NearbyCraftCommands/><NearbySmeltCommands/><RewardForPossessingItem sparse="true" excludeLoops="true"><Item amount="1" reward="1" type="log"/><Item amount="1" reward="2" type="planks"/><Item amount="1" reward="4" type="stick"/><Item amount="1" reward="4" type="crafting_table"/><Item amount="1" reward="8" type="wooden_pickaxe"/><Item amount="1" reward="16" type="cobblestone"/><Item amount="1" reward="32" type="furnace"/><Item amount="1" reward="32" type="stone_pickaxe"/><Item amount="1" reward="64" type="iron_ore"/><Item amount="1" reward="128" type="iron_ingot"/><Item amount="1" reward="256" type="iron_pickaxe"/></RewardForPossessingItem><AgentQuitFromCraftingItem><Item type="iron_pickaxe" amount="1"/></AgentQuitFromCraftingItem></AgentHandlers></AgentSection></Mission><ExperimentUID>9ac3ad45-3c45-4e53-b24e-a107edcfc3b9</ExperimentUID><ClientRole>0</ClientRole><ClientAgentConnection><ClientIPAddress>127.0.0.1</ClientIPAddress><ClientMissionControlPort>0</ClientMissionControlPort><ClientCommandsPort>0</ClientCommandsPort><AgentIPAddress>127.0.0.1</AgentIPAddress><AgentMissionControlPort>0</AgentMissionControlPort><AgentVideoPort>0</AgentVideoPort><AgentDepthPort>0</AgentDepthPort><AgentLuminancePort>0</AgentLuminancePort><AgentObservationsPort>0</AgentObservationsPort><AgentRewardsPort>0</AgentRewardsPort><AgentColourMapPort>0</AgentColourMapPort></ClientAgentConnection></MissionInit>
+[09:33:05] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[09:33:05] [EnvServerSocketHandler/INFO]: [STDOUT]: REPLYING WITH: MALMOOK
+[09:33:05] [Client thread/INFO]: [STDOUT]: Mission received: MineRLObtainIronPickaxe-v0
+[09:33:05] [Client thread/INFO]: [STDOUT]: CLIENT request state: CREATING_HANDLERS
+[09:33:05] [Client thread/INFO]: [STDOUT]: CLIENT enter state: CREATING_HANDLERS
+[09:33:05] [Client thread/INFO]: [STDOUT]: Starting command server.
+[09:33:05] [Thread-12/INFO]: [STDOUT]: INFO: ->com(0) Listening for messages on port 10136
+[09:33:05] [Client thread/INFO]: [STDOUT]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[09:33:05] [Client thread/INFO]: [STDOUT]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[09:33:05] [Client thread/INFO]: [STDOUT]: CLIENT request state: CREATING_NEW_WORLD
+[09:33:05] [Client thread/INFO]: [STDOUT]: CLIENT enter state: CREATING_NEW_WORLD
+[09:33:05] [Client thread/INFO]: [STDOUT]: [LOGTOPY] GENERATOR OPTIONS = {}
+[09:33:05] [Client thread/INFO]: Mixing MixinWorldProviderSpawn from mixins.overclocking.malmomod.json into net.minecraft.world.WorldProvider
+[09:33:05] [Server thread/INFO]: Starting integrated minecraft server version 1.11.2
+[09:33:05] [Server thread/INFO]: Generating keypair
+[09:33:06] [Server thread/INFO]: Injecting existing block and item data into this server instance
+[09:33:06] [Server thread/INFO]: Applying holder lookups
+[09:33:06] [Server thread/INFO]: Holder lookups applied
+[09:33:06] [Server thread/INFO]: Loading dimension 0 (TEMP_0_237bc164-52d4-4a19-9a13-4da68799cf41) (net.minecraft.server.integrated.IntegratedServer@5a14fbc0)
+[09:33:06] [Server thread/INFO]: Loading dimension 1 (TEMP_0_237bc164-52d4-4a19-9a13-4da68799cf41) (net.minecraft.server.integrated.IntegratedServer@5a14fbc0)
+[09:33:06] [Server thread/INFO]: Loading dimension -1 (TEMP_0_237bc164-52d4-4a19-9a13-4da68799cf41) (net.minecraft.server.integrated.IntegratedServer@5a14fbc0)
+[09:33:06] [Server thread/INFO]: Preparing start region for level 0
+[09:33:07] [Server thread/INFO]: Preparing spawn area: 15%
+[09:33:08] [Server thread/INFO]: Preparing spawn area: 37%
+[09:33:09] [Server thread/INFO]: Preparing spawn area: 58%
+[09:33:10] [Server thread/INFO]: Preparing spawn area: 80%
+[09:33:11] [Server thread/INFO]: Changing view distance to 4, from 10
+[09:33:11] [Server thread/INFO]: Mixing MixinLargeInventory from mixins.overclocking.malmomod.json into net.minecraft.entity.player.InventoryPlayer
+[09:33:11] [Netty Local Client IO #0/INFO]: [STDOUT]: Transformed Name: net.minecraft.client.entity.EntityOtherPlayerMP
+[09:33:11] [Netty Local Client IO #0/INFO]: [STDOUT]: MALMO: Found EntityOtherPlayerMP, attempting to transform it
+[09:33:11] [Server thread/INFO]: [STDOUT]: SERVER request state: WAITING_FOR_MOD_READY
+[09:33:11] [Server thread/INFO]: [STDOUT]: CLIENT request state: WAITING_FOR_SERVER_READY
+[09:33:11] [Server thread/INFO]: [STDOUT]: SERVER enter state: WAITING_FOR_MOD_READY
+[09:33:11] [Netty Local Client IO #0/INFO]: Server protocol version 2
+[09:33:11] [Netty Server IO #1/INFO]: Client protocol version 2
+[09:33:11] [Netty Server IO #1/INFO]: Client attempting to join with 5 mods : minecraft@1.11.2,FML@8.0.99.99,malmomod@0.37.0,forge@13.20.1.2588,mcp@9.19
+[09:33:11] [Netty Local Client IO #0/INFO]: [Netty Local Client IO #0] Client side modded connection established
+[09:33:11] [Server thread/INFO]: [Server thread] Server side modded connection established
+[09:33:12] [Server thread/INFO]: MineRLAgent0[local:E:3c3b6c0c] logged in with entity id 1063 at (11.5, 80.0, 237.5)
+[09:33:12] [Server thread/INFO]: MineRLAgent0 joined the game
+[09:33:12] [Server thread/INFO]: [STDOUT]: SERVER request state: DORMANT
+[09:33:12] [Server thread/INFO]: [STDOUT]: SERVER enter state: DORMANT
+[09:33:12] [Server thread/INFO]: [STDOUT]: INCOMING MISSION: Received MissionInit directly through ServerStateMachine constructor.
+[09:33:12] [Server thread/INFO]: [STDOUT]: Mission received: MineRLObtainIronPickaxe-v0
+[09:33:12] [Server thread/INFO]: Received mission: §9MineRLObtainIronPickaxe-v0
+[09:33:12] [Server thread/INFO]: Source: §a127.0.0.1
+[09:33:12] [Server thread/INFO]: [STDOUT]: SERVER request state: BUILDING_WORLD
+[09:33:12] [Server thread/INFO]: [STDOUT]: SERVER enter state: BUILDING_WORLD
+[09:33:12] [Server thread/INFO]: [STDOUT]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[09:33:12] [Client thread/INFO]: [CHAT] Received mission: §9MineRLObtainIronPickaxe-v0
+[09:33:12] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[09:33:12] [Client thread/INFO]: [STDOUT]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[09:33:12] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
+[09:33:12] [Server thread/INFO]: [STDOUT]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[09:33:12] [Server thread/INFO]: [STDOUT]: Experiment requires: 
+[09:33:12] [Server thread/INFO]: [STDOUT]: >>>> MineRLAgent0
+[09:33:12] [Server thread/INFO]: Saving and pausing game...
+[09:33:12] [Server thread/INFO]: Saving chunks for level 'TEMP_0_237bc164-52d4-4a19-9a13-4da68799cf41'/Overworld
+[09:33:12] [Client thread/INFO]: Mixing MixinRandomSkinTexture from mixins.overclocking.malmomod.json into net.minecraft.client.resources.DefaultPlayerSkin
+[09:33:12] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
+[09:33:13] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
+[09:33:13] [Server thread/INFO]: Saving chunks for level 'TEMP_0_237bc164-52d4-4a19-9a13-4da68799cf41'/Nether
+[09:33:13] [Server thread/INFO]: Saving chunks for level 'TEMP_0_237bc164-52d4-4a19-9a13-4da68799cf41'/The End
+[09:33:13] [Server thread/INFO]: [STDOUT]: Initializing player with username MineRLAgent0 and agentname MineRLAgent0
+[09:33:13] [Client thread/INFO]: [STDOUT]: CLIENT request state: RUNNING
+[09:33:13] [Client thread/INFO]: [STDOUT]: CLIENT enter state: RUNNING
+[09:33:13] [Client thread/INFO]: [STDOUT]: Preparing reward com.microsoft.Malmo.MissionHandlers.RewardForPossessingItemImplementation@595c2f7f with agent name MineRLAgent0
+[09:33:13] [Client thread/INFO]: [STDOUT]: [LOGTOPY] On Mac OSX Catalina make sure to install this OpenJDK 1.8.0_152-release-1056-b12, this prevents the NSDragRegions crash
+[09:33:13] [Client thread/INFO]: [STDOUT]: Resized the window
+[09:33:13] [Client thread/INFO]: [STDOUT]: Unpausing
+[09:33:13] [Server thread/INFO]: [STDOUT]: SERVER request state: RUNNING
+[09:33:13] [Server thread/INFO]: [STDOUT]: SERVER enter state: RUNNING
+[09:33:19] [Server thread/INFO]: [STDOUT]: Warning: managed 12/20 ticks this second.
+[09:33:20] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:21] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:22] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:23] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:24] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:25] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:26] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:27] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:28] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:29] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:30] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:31] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:32] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:34] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:35] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:36] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:37] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:38] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[09:33:39] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+[09:33:43] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.

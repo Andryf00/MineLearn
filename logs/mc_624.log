@@ -1,0 +1,501 @@
+[22:29:51] [EnvServerSocketHandler/INFO]: [STDOUT]: Received from 127.0.0.1:<MissionInit xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SchemaVersion="" PlatformVersion="0.37.0"><Mission><About><Summary>MineRLObtainDiamond-v0</Summary></About><ModSettings><MsPerTick>50</MsPerTick></ModSettings><ServerSection><ServerInitialConditions><Time><StartTime>6000</StartTime><AllowPassageOfTime>true</AllowPassageOfTime></Time><AllowSpawning>true</AllowSpawning></ServerInitialConditions><ServerHandlers><DefaultWorldGenerator forceReset="true" generatorOptions="{}"/><ServerQuitFromTimeUp timeLimitMs="900000" description="out_of_time"/><ServerQuitWhenAnyAgentFinishes/></ServerHandlers></ServerSection><AgentSection mode="Survival"><Name>MineRLAgent0</Name><AgentStart/><AgentHandlers><FileBasedPerformanceProducer/><ObservationFromDamage/><PauseCommand/><VideoProducer want_depth="false"><Width>64</Width><Height>64</Height></VideoProducer><ObservationFromFullInventory flat="false"/><ObservationFromEquippedItem/><HumanLevelCommands/><CameraCommands/><PlaceCommands/><EquipCommands/><SimpleCraftCommands/><NearbyCraftCommands/><NearbySmeltCommands/><RewardForPossessingItem sparse="true" excludeLoops="true"><Item amount="1" reward="1" type="log"/><Item amount="1" reward="2" type="planks"/><Item amount="1" reward="4" type="stick"/><Item amount="1" reward="4" type="crafting_table"/><Item amount="1" reward="8" type="wooden_pickaxe"/><Item amount="1" reward="16" type="cobblestone"/><Item amount="1" reward="32" type="furnace"/><Item amount="1" reward="32" type="stone_pickaxe"/><Item amount="1" reward="64" type="iron_ore"/><Item amount="1" reward="128" type="iron_ingot"/><Item amount="1" reward="256" type="iron_pickaxe"/><Item amount="1" reward="1024" type="diamond"/></RewardForPossessingItem><AgentQuitFromPossessingItem><Item type="diamond" amount="1"/></AgentQuitFromPossessingItem></AgentHandlers></AgentSection></Mission><ExperimentUID>5bb82163-628b-411c-8b95-c037b060fc7e</ExperimentUID><ClientRole>0</ClientRole><ClientAgentConnection><ClientIPAddress>127.0.0.1</ClientIPAddress><ClientMissionControlPort>0</ClientMissionControlPort><ClientCommandsPort>0</ClientCommandsPort><AgentIPAddress>127.0.0.1</AgentIPAddress><AgentMissionControlPort>0</AgentMissionControlPort><AgentVideoPort>0</AgentVideoPort><AgentDepthPort>0</AgentDepthPort><AgentLuminancePort>0</AgentLuminancePort><AgentObservationsPort>0</AgentObservationsPort><AgentRewardsPort>0</AgentRewardsPort><AgentColourMapPort>0</AgentColourMapPort></ClientAgentConnection></MissionInit>
+[22:29:52] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[22:29:52] [EnvServerSocketHandler/INFO]: [STDOUT]: REPLYING WITH: MALMOOK
+[22:29:52] [Client thread/INFO]: [STDOUT]: Mission received: MineRLObtainDiamond-v0
+[22:29:52] [Client thread/INFO]: [STDOUT]: CLIENT request state: CREATING_HANDLERS
+[22:29:52] [Client thread/INFO]: [STDOUT]: CLIENT enter state: CREATING_HANDLERS
+[22:29:52] [Client thread/INFO]: [STDOUT]: Starting command server.
+[22:29:52] [Thread-12/INFO]: [STDOUT]: INFO: ->com(0) Listening for messages on port 10849
+[22:29:52] [Client thread/INFO]: [STDOUT]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[22:29:52] [Client thread/INFO]: [STDOUT]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[22:29:52] [Client thread/INFO]: [STDOUT]: CLIENT request state: CREATING_NEW_WORLD
+[22:29:52] [Client thread/INFO]: [STDOUT]: CLIENT enter state: CREATING_NEW_WORLD
+[22:29:52] [Client thread/INFO]: [STDOUT]: [LOGTOPY] GENERATOR OPTIONS = {}
+[22:29:53] [Client thread/INFO]: Mixing MixinWorldProviderSpawn from mixins.overclocking.malmomod.json into net.minecraft.world.WorldProvider
+[22:29:53] [Server thread/INFO]: Starting integrated minecraft server version 1.11.2
+[22:29:53] [Server thread/INFO]: Generating keypair
+[22:29:53] [Server thread/INFO]: Injecting existing block and item data into this server instance
+[22:29:53] [Server thread/INFO]: Applying holder lookups
+[22:29:53] [Server thread/INFO]: Holder lookups applied
+[22:29:53] [Server thread/INFO]: Loading dimension 0 (TEMP_0_b059702e-0d11-4f32-977f-93a1b8c1ce19) (net.minecraft.server.integrated.IntegratedServer@18cb66f1)
+[22:29:54] [Server thread/INFO]: Loading dimension 1 (TEMP_0_b059702e-0d11-4f32-977f-93a1b8c1ce19) (net.minecraft.server.integrated.IntegratedServer@18cb66f1)
+[22:29:54] [Server thread/INFO]: Loading dimension -1 (TEMP_0_b059702e-0d11-4f32-977f-93a1b8c1ce19) (net.minecraft.server.integrated.IntegratedServer@18cb66f1)
+[22:29:54] [Server thread/INFO]: Preparing start region for level 0
+[22:29:55] [Server thread/INFO]: Preparing spawn area: 11%
+[22:29:56] [Server thread/INFO]: Preparing spawn area: 23%
+[22:29:57] [Server thread/INFO]: Preparing spawn area: 38%
+[22:29:58] [Server thread/INFO]: Preparing spawn area: 52%
+[22:29:59] [Server thread/INFO]: Preparing spawn area: 67%
+[22:30:00] [Server thread/INFO]: Preparing spawn area: 81%
+[22:30:01] [Server thread/INFO]: Preparing spawn area: 97%
+[22:30:01] [Server thread/INFO]: Changing view distance to 4, from 10
+[22:30:02] [Server thread/INFO]: Mixing MixinLargeInventory from mixins.overclocking.malmomod.json into net.minecraft.entity.player.InventoryPlayer
+[22:30:02] [Netty Local Client IO #0/INFO]: [STDOUT]: Transformed Name: net.minecraft.client.entity.EntityOtherPlayerMP
+[22:30:02] [Netty Local Client IO #0/INFO]: [STDOUT]: MALMO: Found EntityOtherPlayerMP, attempting to transform it
+[22:30:02] [Server thread/INFO]: [STDOUT]: SERVER request state: WAITING_FOR_MOD_READY
+[22:30:02] [Server thread/INFO]: [STDOUT]: CLIENT request state: WAITING_FOR_SERVER_READY
+[22:30:02] [Server thread/INFO]: [STDOUT]: SERVER enter state: WAITING_FOR_MOD_READY
+[22:30:02] [Netty Local Client IO #0/INFO]: Server protocol version 2
+[22:30:02] [Netty Server IO #1/INFO]: Client protocol version 2
+[22:30:02] [Netty Server IO #1/INFO]: Client attempting to join with 5 mods : minecraft@1.11.2,FML@8.0.99.99,malmomod@0.37.0,forge@13.20.1.2588,mcp@9.19
+[22:30:02] [Netty Local Client IO #0/INFO]: [Netty Local Client IO #0] Client side modded connection established
+[22:30:02] [Client thread/INFO]: [STDOUT]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[22:30:02] [Server thread/INFO]: [Server thread] Server side modded connection established
+[22:30:02] [Server thread/INFO]: MineRLAgent0[local:E:56aba35f] logged in with entity id 737 at (11.5, 80.0, 237.5)
+[22:30:02] [Server thread/INFO]: MineRLAgent0 joined the game
+[22:30:02] [Server thread/INFO]: [STDOUT]: SERVER request state: DORMANT
+[22:30:02] [Server thread/INFO]: [STDOUT]: SERVER enter state: DORMANT
+[22:30:02] [Server thread/INFO]: [STDOUT]: INCOMING MISSION: Received MissionInit directly through ServerStateMachine constructor.
+[22:30:02] [Server thread/INFO]: [STDOUT]: Mission received: MineRLObtainDiamond-v0
+[22:30:02] [Server thread/INFO]: Received mission: §9MineRLObtainDiamond-v0
+[22:30:02] [Server thread/INFO]: Source: §a127.0.0.1
+[22:30:02] [Server thread/INFO]: [STDOUT]: SERVER request state: BUILDING_WORLD
+[22:30:02] [Server thread/INFO]: [STDOUT]: SERVER enter state: BUILDING_WORLD
+[22:30:02] [Server thread/INFO]: [STDOUT]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[22:30:03] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
+[22:30:03] [Client thread/INFO]: Mixing MixinRandomSkinTexture from mixins.overclocking.malmomod.json into net.minecraft.client.resources.DefaultPlayerSkin
+[22:30:03] [Client thread/INFO]: [CHAT] Received mission: §9MineRLObtainDiamond-v0
+[22:30:03] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[22:30:03] [Server thread/INFO]: [STDOUT]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[22:30:03] [Server thread/INFO]: [STDOUT]: Experiment requires: 
+[22:30:03] [Server thread/INFO]: [STDOUT]: >>>> MineRLAgent0
+[22:30:04] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
+[22:30:04] [Server thread/INFO]: [STDOUT]: Initializing player with username MineRLAgent0 and agentname MineRLAgent0
+[22:30:04] [Client thread/INFO]: [STDOUT]: CLIENT request state: RUNNING
+[22:30:04] [Client thread/INFO]: [STDOUT]: CLIENT enter state: RUNNING
+[22:30:04] [Client thread/INFO]: [STDOUT]: Preparing reward com.microsoft.Malmo.MissionHandlers.RewardForPossessingItemImplementation@6bc7c67f with agent name MineRLAgent0
+[22:30:04] [Server thread/INFO]: [STDOUT]: SERVER request state: RUNNING
+[22:30:04] [Client thread/INFO]: [STDOUT]: [LOGTOPY] On Mac OSX Catalina make sure to install this OpenJDK 1.8.0_152-release-1056-b12, this prevents the NSDragRegions crash
+[22:30:04] [Server thread/INFO]: [STDOUT]: SERVER enter state: RUNNING
+[22:30:04] [Client thread/INFO]: [STDOUT]: Resized the window
+[22:30:04] [Client thread/INFO]: [STDOUT]: Unpausing
+[22:30:06] [Server thread/INFO]: [STDOUT]: Warning: managed 4/20 ticks this second.
+[22:30:07] [Server thread/INFO]: [STDOUT]: Warning: managed 14/20 ticks this second.
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+RewardForPossessingItemImplementation - MineRLAgent0: 2
+RewardForPossessingItemImplementation - MineRLAgent0: 3
+RewardForPossessingItemImplementation - MineRLAgent0: 4
+RewardForPossessingItemImplementation - MineRLAgent0: 5
+RewardForPossessingItemImplementation - MineRLAgent0: 6
+RewardForPossessingItemImplementation - MineRLAgent0: 7
+RewardForPossessingItemImplementation - MineRLAgent0: 8
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+RewardForPossessingItemImplementation - MineRLAgent0: 9
+RewardForPossessingItemImplementation - MineRLAgent0: 10
+RewardForPossessingItemImplementation - MineRLAgent0: 11
+RewardForPossessingItemImplementation - MineRLAgent0: 12
+RewardForPossessingItemImplementation - MineRLAgent0: 13
+RewardForPossessingItemImplementation - MineRLAgent0: 14
+RewardForPossessingItemImplementation - MineRLAgent0: 15
+RewardForPossessingItemImplementation - MineRLAgent0: 16
+RewardForPossessingItemImplementation - MineRLAgent0: 17
+RewardForPossessingItemImplementation - MineRLAgent0: 4
+RewardForPossessingItemImplementation - MineRLAgent0: 4
+RewardForPossessingItemImplementation - MineRLAgent0: 8
+RewardForPossessingItemImplementation - MineRLAgent0: 4
+RewardForPossessingItemImplementation - MineRLAgent0: 8
+RewardForPossessingItemImplementation - MineRLAgent0: 12
+RewardForPossessingItemImplementation - MineRLAgent0: 10
+RewardForPossessingItemImplementation - MineRLAgent0: 14
+RewardForPossessingItemImplementation - MineRLAgent0: 18
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+RewardForPossessingItemImplementation - MineRLAgent0: 2
+RewardForPossessingItemImplementation - MineRLAgent0: 3
+RewardForPossessingItemImplementation - MineRLAgent0: 10
+RewardForPossessingItemImplementation - MineRLAgent0: 14
+RewardForPossessingItemImplementation - MineRLAgent0: 16
+RewardForPossessingItemImplementation - MineRLAgent0: 16
+RewardForPossessingItemImplementation - MineRLAgent0: 20
+RewardForPossessingItemImplementation - MineRLAgent0: 18
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+[22:31:00] [Client thread/INFO]: [STDOUT]: 2.0 damage from fall by entity null
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+RewardForPossessingItemImplementation - MineRLAgent0: 2
+RewardForPossessingItemImplementation - MineRLAgent0: 3
+RewardForPossessingItemImplementation - MineRLAgent0: 4
+RewardForPossessingItemImplementation - MineRLAgent0: 5
+RewardForPossessingItemImplementation - MineRLAgent0: 6
+RewardForPossessingItemImplementation - MineRLAgent0: 7
+RewardForPossessingItemImplementation - MineRLAgent0: 8
+RewardForPossessingItemImplementation - MineRLAgent0: 9
+RewardForPossessingItemImplementation - MineRLAgent0: 10
+RewardForPossessingItemImplementation - MineRLAgent0: 11
+RewardForPossessingItemImplementation - MineRLAgent0: 12
+RewardForPossessingItemImplementation - MineRLAgent0: 13
+RewardForPossessingItemImplementation - MineRLAgent0: 14
+RewardForPossessingItemImplementation - MineRLAgent0: 15
+RewardForPossessingItemImplementation - MineRLAgent0: 16
+RewardForPossessingItemImplementation - MineRLAgent0: 17
+RewardForPossessingItemImplementation - MineRLAgent0: 18
+RewardForPossessingItemImplementation - MineRLAgent0: 19
+RewardForPossessingItemImplementation - MineRLAgent0: 20
+RewardForPossessingItemImplementation - MineRLAgent0: 21
+RewardForPossessingItemImplementation - MineRLAgent0: 22
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+RewardForPossessingItemImplementation - MineRLAgent0: 2
+RewardForPossessingItemImplementation - MineRLAgent0: 23
+RewardForPossessingItemImplementation - MineRLAgent0: 24
+RewardForPossessingItemImplementation - MineRLAgent0: 3
+RewardForPossessingItemImplementation - MineRLAgent0: 4
+RewardForPossessingItemImplementation - MineRLAgent0: 5
+RewardForPossessingItemImplementation - MineRLAgent0: 25
+RewardForPossessingItemImplementation - MineRLAgent0: 6
+RewardForPossessingItemImplementation - MineRLAgent0: 7
+RewardForPossessingItemImplementation - MineRLAgent0: 8
+RewardForPossessingItemImplementation - MineRLAgent0: 9
+RewardForPossessingItemImplementation - MineRLAgent0: 10
+RewardForPossessingItemImplementation - MineRLAgent0: 11
+RewardForPossessingItemImplementation - MineRLAgent0: 19
+RewardForPossessingItemImplementation - MineRLAgent0: 23
+RewardForPossessingItemImplementation - MineRLAgent0: 22
+RewardForPossessingItemImplementation - MineRLAgent0: 26
+RewardForPossessingItemImplementation - MineRLAgent0: 30
+RewardForPossessingItemImplementation - MineRLAgent0: 34
+RewardForPossessingItemImplementation - MineRLAgent0: 38
+RewardForPossessingItemImplementation - MineRLAgent0: 42
+RewardForPossessingItemImplementation - MineRLAgent0: 2
+RewardForPossessingItemImplementation - MineRLAgent0: 3
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+RewardForPossessingItemImplementation - MineRLAgent0: 1
+RewardForPossessingItemImplementation - MineRLAgent0: 2
+RewardForPossessingItemImplementation - MineRLAgent0: 4
+RewardForPossessingItemImplementation - MineRLAgent0: 42
+RewardForPossessingItemImplementation - MineRLAgent0: 6
+RewardForPossessingItemImplementation - MineRLAgent0: 46
+RewardForPossessingItemImplementation - MineRLAgent0: 3
+RewardForPossessingItemImplementation - MineRLAgent0: 5
+RewardForPossessingItemImplementation - MineRLAgent0: 9
+RewardForPossessingItemImplementation - MineRLAgent0: 48
+RewardForPossessingItemImplementation - MineRLAgent0: 11
+RewardForPossessingItemImplementation - MineRLAgent0: 52
+RewardForPossessingItemImplementation - MineRLAgent0: 56
+RewardForPossessingItemImplementation - MineRLAgent0: 4
+RewardForPossessingItemImplementation - MineRLAgent0: 5
+
+> Task :runClient FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':runClient'.
+> Process 'command 'C:\Program Files\Java\jdk1.8.0_351\bin\java.exe'' finished with non-zero exit value -805306369
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/4.10.2/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD FAILED in 19m 56s
+19 actionable tasks: 8 executed, 11 up-to-date
+
+> Configure project :
+This mapping 'snapshot_20161220' was designed for MC 1.11! Use at your own peril.
+#################################################
+         ForgeGradle 2.2-SNAPSHOT-8de58cf        
+  https://github.com/MinecraftForge/ForgeGradle  
+#################################################
+               Powered by MCP unknown               
+             http://modcoderpack.com             
+         by: Searge, ProfMobius, Fesh0r,         
+         R4wk, ZeuX, IngisKahn, bspkrs           
+#################################################
+Found AccessTransformer: malmomod_at.cfg
+
+> Task :deobfCompileDummyTask
+> Task :deobfProvidedDummyTask
+> Task :getVersionJson
+> Task :extractUserdev UP-TO-DATE
+> Task :downloadClient SKIPPED
+> Task :downloadServer SKIPPED
+> Task :splitServerJar SKIPPED
+> Task :mergeJars SKIPPED
+> Task :applyBinaryPatches SKIPPED
+> Task :extractDependencyATs SKIPPED
+> Task :extractMcpData SKIPPED
+> Task :extractMcpMappings SKIPPED
+> Task :genSrgs SKIPPED
+> Task :deobfMcMCP SKIPPED
+> Task :sourceApiJava UP-TO-DATE
+> Task :compileApiJava NO-SOURCE
+> Task :processApiResources NO-SOURCE
+> Task :apiClasses UP-TO-DATE
+> Task :copyModToClient UP-TO-DATE
+> Task :copyModToServer UP-TO-DATE
+> Task :copySrg UP-TO-DATE
+> Task :deleteSchemas
+> Task :copySchemas
+> Task :jaxb UP-TO-DATE
+> Task :sourceMainJava UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :jar UP-TO-DATE
+> Task :extractNatives SKIPPED
+> Task :getAssetIndex UP-TO-DATE
+
+> Task :getAssets
+Current status: 976/1196   81%
+
+> Task :makeStart FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Failed to capture fingerprint of output files for task ':makeStart' property 'startOut' during up-to-date check.
+> Failed to create MD5 hash for file 'C:\Users\andre\.gradle\caches\minecraft\net\minecraftforge\forge\1.11.2-13.20.1.2588\start\.cache' as it does not exist.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/4.10.2/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD FAILED in 46s
+18 actionable tasks: 7 executed, 11 up-to-date
+
+> Configure project :
+This mapping 'snapshot_20161220' was designed for MC 1.11! Use at your own peril.
+#################################################
+         ForgeGradle 2.2-SNAPSHOT-8de58cf        
+  https://github.com/MinecraftForge/ForgeGradle  
+#################################################
+               Powered by MCP unknown               
+             http://modcoderpack.com             
+         by: Searge, ProfMobius, Fesh0r,         
+         R4wk, ZeuX, IngisKahn, bspkrs           
+#################################################
+Found AccessTransformer: malmomod_at.cfg
+
+> Task :deobfCompileDummyTask
+> Task :deobfProvidedDummyTask
+> Task :getVersionJson
+> Task :extractUserdev UP-TO-DATE
+> Task :downloadClient SKIPPED
+> Task :downloadServer SKIPPED
+> Task :splitServerJar SKIPPED
+> Task :mergeJars SKIPPED
+> Task :applyBinaryPatches SKIPPED
+> Task :extractDependencyATs SKIPPED
+> Task :extractMcpData SKIPPED
+> Task :extractMcpMappings SKIPPED
+> Task :genSrgs SKIPPED
+> Task :deobfMcMCP SKIPPED
+> Task :sourceApiJava UP-TO-DATE
+> Task :compileApiJava NO-SOURCE
+> Task :processApiResources NO-SOURCE
+> Task :apiClasses UP-TO-DATE
+> Task :copyModToClient UP-TO-DATE
+> Task :copyModToServer UP-TO-DATE
+> Task :copySrg UP-TO-DATE
+> Task :deleteSchemas
+> Task :copySchemas
+> Task :jaxb UP-TO-DATE
+> Task :sourceMainJava UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :jar UP-TO-DATE
+> Task :extractNatives SKIPPED
+> Task :getAssetIndex UP-TO-DATE
+
+> Task :getAssets
+Current status: 987/1196   82%
+
+> Task :makeStart
+
+> Task :runClient
+2022-12-17 22:50:47,853 WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+[22:50:47] [main/INFO]: Extra: []
+[22:50:47] [main/INFO]: Found and added coremod: com.microsoft.Malmo.OverclockingPlugin
+[22:50:47] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/andre/.gradle/caches/minecraft/assets, --assetIndex, 1.11, --accessToken{REDACTED}, --version, 1.11.2, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[22:50:47] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[22:50:47] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[22:50:47] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[22:50:47] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[22:50:47] [main/INFO]: Forge Mod Loader version 13.20.1.2588 for Minecraft 1.11.2 loading
+[22:50:47] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_351, running on Windows 11:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_351\jre
+[22:50:48] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[22:50:48] [main/INFO]: Found a command line coremod : com.microsoft.Malmo.OverclockingPlugin
+[22:50:48] [main/WARN]: The coremod com.microsoft.Malmo.OverclockingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+2022-12-17 22:50:48,193 WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+2022-12-17 22:50:48,216 WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+[22:50:48] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.7.5 Source=file:/C:/Users/andre/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.5-SNAPSHOT/c989878008c2c5ff1a7c6491c4103d8faa221d19/mixin-0.7.5-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
+/*********************************************************************************************************************************************************************************************************/
+/*                                                                            SpongePowered MIXIN (Verbose debugging enabled)                                                                            */
+/*********************************************************************************************************************************************************************************************************/
+/*                        Code source : file:/C:/Users/andre/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.5-SNAPSHOT/c989878008c2c5ff1a7c6491c4103d8faa221d19/mixin-0.7.5-SNAPSHOT.jar */
+/*                   Internal Version : 0.7.5                                                                                                                                                            */
+/*                   Java 8 Supported : true                                                                                                                                                             */
+/*********************************************************************************************************************************************************************************************************/
+/*                       Service Name : LaunchWrapper                                                                                                                                                    */
+/*                      Service Class : org.spongepowered.asm.service.mojang.MixinServiceLaunchWrapper                                                                                                   */
+/*********************************************************************************************************************************************************************************************************/
+/*                        mixin.debug : <true>                                                                                                                                                           */
+/*                 mixin.debug.export : - <true>                                                                                                                                                         */
+/*          mixin.debug.export.filter : - - <null>                                                                                                                                                       */
+/*       mixin.debug.export.decompile : - - <true>                                                                                                                                                       */
+/* mixin.debug.export.decompile.async : - - - <true>                                                                                                                                                     */
+/*                 mixin.debug.verify : - <true>                                                                                                                                                         */
+/*                mixin.debug.verbose : - <true>                                                                                                                                                         */
+/*        mixin.debug.countInjections : - <true>                                                                                                                                                         */
+/*                 mixin.debug.strict : - <false>                                                                                                                                                        */
+/*          mixin.debug.strict.unique : - - <false>                                                                                                                                                      */
+/*         mixin.debug.strict.targets : - - <false>                                                                                                                                                      */
+/*               mixin.debug.profiler : - <true>                                                                                                                                                         */
+/*          mixin.dumpTargetOnFailure : <false>                                                                                                                                                          */
+/*                       mixin.checks : <false>                                                                                                                                                          */
+/*            mixin.checks.interfaces : - <false>                                                                                                                                                        */
+/*     mixin.checks.interfaces.strict : - - <false>                                                                                                                                                      */
+/*            mixin.ignoreConstraints : <false>                                                                                                                                                          */
+/*                      mixin.hotSwap : <false>                                                                                                                                                          */
+/*                          mixin.env : <false>                                                                                                                                                          */
+/*                      mixin.env.obf : - <false>                                                                                                                                                        */
+/*            mixin.env.disableRefMap : - <false>                                                                                                                                                        */
+/*              mixin.env.remapRefMap : - <true>                                                                                                                                                         */
+/*      mixin.env.refMapRemappingFile : - <>                                                                                                                                                             */
+/*       mixin.env.refMapRemappingEnv : - <searge>                                                                                                                                                       */
+/*           mixin.env.ignoreRequired : - <false>                                                                                                                                                        */
+/*              mixin.env.compatLevel : - <false>                                                                                                                                                        */
+/*         mixin.env.shiftByViolation : - <warn>                                                                                                                                                         */
+/*     mixin.initialiserInjectionMode : <default>                                                                                                                                                        */
+/*********************************************************************************************************************************************************************************************************/
+/*                      Detected Side : CLIENT                                                                                                                                                           */
+/*********************************************************************************************************************************************************************************************************/
+[22:50:48] [main/INFO]: Attempting to load Fernflower decompiler (Threaded mode)
+[22:50:48] [main/INFO]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[22:50:48] [main/INFO]: Compatibility level set to JAVA_8
+[22:50:48] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[22:50:48] [main/INFO]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[22:50:48] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[22:50:48] [main/INFO]: Injecting location in coremod com.microsoft.Malmo.OverclockingPlugin
+[22:50:48] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[22:50:48] [main/INFO]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[22:50:48] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[22:50:48] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[22:50:48] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[22:50:48] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[22:50:48] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[22:50:48] [main/INFO]: Preparing mixins for MixinEnvironment[PREINIT]
+[22:50:48] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[22:50:49] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
+[22:50:49] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[22:50:49] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[22:50:49] [main/INFO]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[22:50:49] [main/INFO]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@553f3b6e
+[22:50:49] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[22:50:50] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[22:50:50] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[22:50:50] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[22:50:50] [main/INFO]: Preparing mixins for MixinEnvironment[DEFAULT]
+[22:50:50] [main/INFO]: Selecting config mixins.overclocking.malmomod.json
+[22:50:50] [main/WARN]: Reference map 'mixins.malmo.refmap.json' for mixins.overclocking.malmomod.json could not be read. If this is a development environment you can ignore this message
+[22:50:50] [main/INFO]: Preparing mixins.overclocking.malmomod.json (12)
+[22:50:50] [main/INFO]: Prepared 12 mixins in 0,473 sec (39,4ms avg) (32ms load, 298ms transform, 0ms plugin)
+[22:50:50] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[22:50:50] [main/INFO]: Mixing MixinMinecraftGameloop from mixins.overclocking.malmomod.json into net.minecraft.client.Minecraft
+[22:50:50] [main/INFO]: [com.microsoft.Malmo.OverclockingClassTransformer:insertTextureHandler:120]: MALMO: Found GlStateManager, attempting to transform it
+[22:50:50] [main/INFO]: [com.microsoft.Malmo.OverclockingClassTransformer:insertTextureHandler:126]: MALMO: Found GlStateManager.bindTexture() method, attempting to transform it
+[22:50:50] [main/INFO]: [com.microsoft.Malmo.OverclockingClassTransformer:insertTextureHandler:139]: MALMO: Hooked into call to GlStateManager.bindTexture()
+[22:50:50] [main/INFO]: A re-entrant transformer '$wrapper.com.microsoft.Malmo.OverclockingClassTransformer' was detected and will no longer process meta class data
+[22:50:51] [main/INFO]: Mixing MixinEntityRandom from mixins.overclocking.malmomod.json into net.minecraft.entity.Entity
+[22:50:51] [main/INFO]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:42]: Transformed Name: net.minecraft.client.entity.EntityPlayerSP
+[22:50:51] [main/INFO]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:42]: Transformed Name: net.minecraft.client.entity.AbstractClientPlayer
+[22:50:51] [Client thread/INFO]: Mixing MixinMinecraftServerRun from mixins.overclocking.malmomod.json into net.minecraft.server.MinecraftServer
+[22:50:51] [Client thread/WARN]: @Shadow target mixins.overclocking.malmomod.json:MixinMinecraftServerRun::statusResponse is final but shadow is not decorated with @Final
+[22:50:51] [Client thread/WARN]: @Shadow target mixins.overclocking.malmomod.json:MixinMinecraftServerRun::LOG is final but shadow is not decorated with @Final
+[22:50:52] [Client thread/INFO]: Setting user: Player370
+[22:50:54] [Client thread/INFO]: Mixing MixinSyncClientStats from mixins.overclocking.malmomod.json into net.minecraft.entity.player.EntityPlayerMP
+[22:50:55] [Client thread/INFO]: Mixing MixinMergeStatsFix from mixins.overclocking.malmomod.json into net.minecraft.stats.StatList
+[22:50:56] [Client thread/INFO]: Mixing MixinLargeInventorySlots from mixins.overclocking.malmomod.json into net.minecraft.inventory.ContainerPlayer
+[22:50:56] [Client thread/WARN]: Skipping bad option: lastServer:
+[22:50:56] [Client thread/INFO]: LWJGL Version: 2.9.4
+[22:50:58] [Client thread/INFO]: [STDOUT]: MALMO: Found GlStateManager, attempting to transform it
+[22:50:58] [Client thread/INFO]: [STDOUT]: MALMO: Found GlStateManager.bindTexture() method, attempting to transform it
+[22:50:58] [Client thread/INFO]: [STDOUT]: MALMO: Hooked into call to GlStateManager.bindTexture()
+[22:50:59] [Client thread/INFO]: -- System Details --
+Details:
+	Minecraft Version: 1.11.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_351, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 492989008 bytes (470 MB) / 816316416 bytes (778 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 2 total; -Xdebug -Xmx2G
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+OverclockingPlugin (MalmoMod-0.37.0.jar)
+  com.microsoft.Malmo.OverclockingClassTransformer
+	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 30.0.101.2079' Renderer: 'Intel(R) Iris(R) Xe Graphics'
+[22:50:59] [Client thread/INFO]: MinecraftForge v13.20.1.2588 Initialized
+[22:50:59] [Client thread/INFO]: Replaced 232 ore recipes
+[22:50:59] [Client thread/INFO]: Mixing MixinForgeHookStatsFix from mixins.overclocking.malmomod.json into net.minecraftforge.common.ForgeHooks
+[22:50:59] [Client thread/INFO]: Found 0 mods from the command line. Injecting into mod discoverer
+[22:50:59] [Client thread/INFO]: Searching C:\Users\andre\AppData\Local\Temp\tmp2pjot3vc\Minecraft\run\mods for mods
+[22:51:01] [Thread-6/INFO]: Using sync timing. 200 frames of Display.update took 207824888 nanos
+[22:51:02] [Client thread/INFO]: Forge Mod Loader has identified 5 mods to load
+[22:51:02] [Client thread/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, malmomod] at CLIENT
+[22:51:02] [Client thread/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, malmomod] at SERVER
+[22:51:04] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[22:51:04] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\andre\AppData\Local\Programs\Python\Python310\Lib\site-packages\minerl\Malmo\Minecraft\build\libs\MalmoMod-0.37.0.jar
+[22:51:04] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\andre\AppData\Local\Programs\Python\Python310\Lib\site-packages\minerl\Malmo\Minecraft\build\libs\MalmoMod-0.37.0.jar
+[22:51:04] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\andre\AppData\Local\Programs\Python\Python310\Lib\site-packages\minerl\Malmo\Minecraft\build\libs\MalmoMod-0.37.0.jar
+[22:51:04] [Client thread/INFO]: Processing ObjectHolder annotations
+[22:51:04] [Client thread/INFO]: Found 1093 ObjectHolder annotations
+[22:51:04] [Client thread/INFO]: Identifying ItemStackHolder annotations
+[22:51:04] [Client thread/INFO]: Found 0 ItemStackHolder annotations
+[22:51:04] [Client thread/INFO]: Applying holder lookups
+[22:51:04] [Client thread/INFO]: Holder lookups applied
+[22:51:04] [Client thread/INFO]: Applying holder lookups
+[22:51:04] [Client thread/INFO]: Holder lookups applied
+[22:51:04] [Client thread/INFO]: Applying holder lookups
+[22:51:04] [Client thread/INFO]: Holder lookups applied
+[22:51:04] [Client thread/INFO]: Configured a dormant chunk cache size of 0
+[22:51:04] [Forge Version Check/INFO]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[22:51:04] [Client thread/INFO]: [STDOUT]: Testing schemas against internal version number: 0.37
+[22:51:04] [Client thread/INFO]: [STDOUT]: [LOGTOPY] Performance directory not specified.
+[22:51:04] [Client thread/INFO]: [STDOUT]: [ERROR] Seed specified was $seed. Expected a long (integer).
+[22:51:04] [Client thread/INFO]: Applying holder lookups
+[22:51:04] [Client thread/INFO]: Holder lookups applied
+[22:51:04] [Client thread/INFO]: Injecting itemstacks
+[22:51:04] [Client thread/INFO]: Itemstack injection complete
+[22:51:10] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[22:51:11] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[22:51:11] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[22:51:11] [Thread-8/INFO]: OpenAL initialized.
+[22:51:11] [Sound Library Loader/INFO]: Sound engine started
+[22:51:15] [Client thread/INFO]: Max texture size: 16384
+[22:51:15] [Client thread/INFO]: Created: 16x16 textures-atlas
+[22:51:15] [Client thread/INFO]: Mixing MixinUpdateChunksNoTimeout from mixins.overclocking.malmomod.json into net.minecraft.client.renderer.RenderGlobal
+[22:51:15] [Client thread/INFO]: Mixing MixinNoGuiInteract from mixins.overclocking.malmomod.json into net.minecraft.client.multiplayer.PlayerControllerMP
+[22:51:16] [Client thread/INFO]: [STDOUT]: CLIENT request state: WAITING_FOR_MOD_READY
+[22:51:16] [Client thread/INFO]: Injecting itemstacks
+[22:51:16] [Client thread/INFO]: Itemstack injection complete
+[22:51:16] [Client thread/INFO]: Forge Mod Loader has successfully loaded 5 mods
+[22:51:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[22:51:16] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\andre\AppData\Local\Programs\Python\Python310\Lib\site-packages\minerl\Malmo\Minecraft\build\libs\MalmoMod-0.37.0.jar
+[22:51:16] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\andre\AppData\Local\Programs\Python\Python310\Lib\site-packages\minerl\Malmo\Minecraft\build\libs\MalmoMod-0.37.0.jar
+[22:51:16] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\andre\AppData\Local\Programs\Python\Python310\Lib\site-packages\minerl\Malmo\Minecraft\build\libs\MalmoMod-0.37.0.jar
+[22:51:19] [Client thread/INFO]: SoundSystem shutting down...
+[22:51:20] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[22:51:20] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[22:51:20] [Thread-10/INFO]: Initializing LWJGL OpenAL
+[22:51:20] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[22:51:20] [Thread-10/INFO]: OpenAL initialized.
+[22:51:20] [Sound Library Loader/INFO]: Sound engine started
+[22:51:24] [Client thread/INFO]: Max texture size: 16384
+[22:51:24] [Client thread/INFO]: Created: 512x512 textures-atlas
+[22:51:26] [Client thread/WARN]: Skipping bad option: lastServer:
+[22:51:27] [Client thread/INFO]: [STDOUT]: CLIENT enter state: WAITING_FOR_MOD_READY
+[22:51:27] [Client thread/INFO]: [STDOUT]: ***** Start MalmoEnvServer on port 9623
+[22:51:27] [Client thread/INFO]: [STDOUT]: CLIENT request state: DORMANT
+[22:51:27] [Client thread/INFO]: [STDOUT]: CLIENT enter state: DORMANT
+[22:51:28] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+Terminare il processo batch (S/N)? ^C^C^C^C^C
+^CTerminare il processo batch (S/N)? 

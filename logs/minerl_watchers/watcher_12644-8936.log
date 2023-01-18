@@ -1,0 +1,6 @@
+[32m2022-12-15 17:57:06[0m [35mcomputo[0m [34mprocess_watcher[6620][0m [1;30mINFO[0m Process watcher started between parent 12644 and child 8936 
+[32m2022-12-15 18:00:49[0m [35mcomputo[0m [34mprocess_watcher[6620][0m [1;30mINFO[0m Parent is not running, hence we need terminate the child.
+[32m2022-12-15 18:00:49[0m [35mcomputo[0m [34mprocess_watcher[6620][0m [1;30mINFO[0m About to reap process tree of 8936:cmd.exe:C:\Windows\System32\cmd.exe i running, owner 12644, printing process tree status in termination order:
+[32m2022-12-15 18:00:49[0m [35mcomputo[0m [34mprocess_watcher[6620][0m [1;30mINFO[0m 	-8936:cmd.exe:C:\Windows\System32\cmd.exe i running, owner 12644
+[32m2022-12-15 18:00:49[0m [35mcomputo[0m [34mprocess_watcher[6620][0m [1;30mINFO[0m Trying to SIGTERM 8936:cmd.exe:C:\Windows\System32\cmd.exe i running, owner 12644
+[32m2022-12-15 18:00:49[0m [35mcomputo[0m [34mprocess_watcher[6620][0m [1;30mINFO[0m Process psutil.Process(pid=8936, name='cmd.exe', status='terminated', exitcode=15, started='17:57:05') terminated with exit code None

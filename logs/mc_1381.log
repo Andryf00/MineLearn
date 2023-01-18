@@ -1,0 +1,75 @@
+[23:43:07] [EnvServerSocketHandler/INFO]: [STDOUT]: Received from 127.0.0.1:<MissionInit xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SchemaVersion="" PlatformVersion="0.37.0"><Mission><About><Summary>MineRLObtainDiamond-v0</Summary></About><ModSettings><MsPerTick>50</MsPerTick></ModSettings><ServerSection><ServerInitialConditions><Time><StartTime>6000</StartTime><AllowPassageOfTime>true</AllowPassageOfTime></Time><AllowSpawning>true</AllowSpawning></ServerInitialConditions><ServerHandlers><DefaultWorldGenerator forceReset="true" generatorOptions="{}"/><ServerQuitFromTimeUp timeLimitMs="900000" description="out_of_time"/><ServerQuitWhenAnyAgentFinishes/></ServerHandlers></ServerSection><AgentSection mode="Survival"><Name>MineRLAgent0</Name><AgentStart/><AgentHandlers><FileBasedPerformanceProducer/><ObservationFromDamage/><PauseCommand/><VideoProducer want_depth="false"><Width>64</Width><Height>64</Height></VideoProducer><ObservationFromFullInventory flat="false"/><ObservationFromEquippedItem/><HumanLevelCommands/><CameraCommands/><PlaceCommands/><EquipCommands/><SimpleCraftCommands/><NearbyCraftCommands/><NearbySmeltCommands/><RewardForPossessingItem sparse="true" excludeLoops="true"><Item amount="1" reward="1" type="log"/><Item amount="1" reward="2" type="planks"/><Item amount="1" reward="4" type="stick"/><Item amount="1" reward="4" type="crafting_table"/><Item amount="1" reward="8" type="wooden_pickaxe"/><Item amount="1" reward="16" type="cobblestone"/><Item amount="1" reward="32" type="furnace"/><Item amount="1" reward="32" type="stone_pickaxe"/><Item amount="1" reward="64" type="iron_ore"/><Item amount="1" reward="128" type="iron_ingot"/><Item amount="1" reward="256" type="iron_pickaxe"/><Item amount="1" reward="1024" type="diamond"/></RewardForPossessingItem><AgentQuitFromPossessingItem><Item type="diamond" amount="1"/></AgentQuitFromPossessingItem></AgentHandlers></AgentSection></Mission><ExperimentUID>7d4e1d83-a507-4d76-abd6-33a1c525ebf0</ExperimentUID><ClientRole>0</ClientRole><ClientAgentConnection><ClientIPAddress>127.0.0.1</ClientIPAddress><ClientMissionControlPort>0</ClientMissionControlPort><ClientCommandsPort>0</ClientCommandsPort><AgentIPAddress>127.0.0.1</AgentIPAddress><AgentMissionControlPort>0</AgentMissionControlPort><AgentVideoPort>0</AgentVideoPort><AgentDepthPort>0</AgentDepthPort><AgentLuminancePort>0</AgentLuminancePort><AgentObservationsPort>0</AgentObservationsPort><AgentRewardsPort>0</AgentRewardsPort><AgentColourMapPort>0</AgentColourMapPort></ClientAgentConnection></MissionInit>
+[23:43:08] [EnvServerSocketHandler/INFO]: [STDOUT]: REPLYING WITH: MALMOOK
+[23:43:08] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[23:43:08] [Client thread/INFO]: [STDOUT]: Mission received: MineRLObtainDiamond-v0
+[23:43:08] [Client thread/INFO]: [STDOUT]: CLIENT request state: CREATING_HANDLERS
+[23:43:08] [Client thread/INFO]: [STDOUT]: CLIENT enter state: CREATING_HANDLERS
+[23:43:08] [Client thread/INFO]: [STDOUT]: Starting command server.
+[23:43:08] [Thread-12/INFO]: [STDOUT]: INFO: ->com(0) Listening for messages on port 10428
+[23:43:08] [Client thread/INFO]: [STDOUT]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[23:43:08] [Client thread/INFO]: [STDOUT]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[23:43:08] [Client thread/INFO]: [STDOUT]: CLIENT request state: CREATING_NEW_WORLD
+[23:43:08] [Client thread/INFO]: [STDOUT]: CLIENT enter state: CREATING_NEW_WORLD
+[23:43:08] [Client thread/INFO]: [STDOUT]: [LOGTOPY] GENERATOR OPTIONS = {}
+[23:43:09] [Client thread/INFO]: Mixing MixinWorldProviderSpawn from mixins.overclocking.malmomod.json into net.minecraft.world.WorldProvider
+[23:43:09] [Server thread/INFO]: Starting integrated minecraft server version 1.11.2
+[23:43:09] [Server thread/INFO]: Generating keypair
+[23:43:09] [Server thread/INFO]: Injecting existing block and item data into this server instance
+[23:43:09] [Server thread/INFO]: Applying holder lookups
+[23:43:09] [Server thread/INFO]: Holder lookups applied
+[23:43:09] [Server thread/INFO]: Loading dimension 0 (TEMP_0_c7456b93-3f58-4e15-a377-1b50f58784e2) (net.minecraft.server.integrated.IntegratedServer@471777b4)
+[23:43:09] [Server thread/INFO]: Loading dimension 1 (TEMP_0_c7456b93-3f58-4e15-a377-1b50f58784e2) (net.minecraft.server.integrated.IntegratedServer@471777b4)
+[23:43:09] [Server thread/INFO]: Loading dimension -1 (TEMP_0_c7456b93-3f58-4e15-a377-1b50f58784e2) (net.minecraft.server.integrated.IntegratedServer@471777b4)
+[23:43:09] [Server thread/INFO]: Preparing start region for level 0
+[23:43:10] [Server thread/INFO]: Preparing spawn area: 15%
+[23:43:11] [Server thread/INFO]: Preparing spawn area: 31%
+[23:43:12] [Server thread/INFO]: Preparing spawn area: 48%
+[23:43:13] [Server thread/INFO]: Preparing spawn area: 67%
+[23:43:14] [Server thread/INFO]: Preparing spawn area: 84%
+[23:43:15] [Server thread/INFO]: Changing view distance to 4, from 10
+[23:43:16] [Server thread/INFO]: Mixing MixinLargeInventory from mixins.overclocking.malmomod.json into net.minecraft.entity.player.InventoryPlayer
+[23:43:16] [Netty Local Client IO #0/INFO]: [STDOUT]: Transformed Name: net.minecraft.client.entity.EntityOtherPlayerMP
+[23:43:16] [Netty Local Client IO #0/INFO]: [STDOUT]: MALMO: Found EntityOtherPlayerMP, attempting to transform it
+[23:43:16] [Server thread/INFO]: [STDOUT]: SERVER request state: WAITING_FOR_MOD_READY
+[23:43:16] [Server thread/INFO]: [STDOUT]: CLIENT request state: WAITING_FOR_SERVER_READY
+[23:43:16] [Server thread/INFO]: [STDOUT]: SERVER enter state: WAITING_FOR_MOD_READY
+[23:43:16] [Netty Local Client IO #0/INFO]: Server protocol version 2
+[23:43:16] [Netty Server IO #1/INFO]: Client protocol version 2
+[23:43:16] [Client thread/INFO]: [STDOUT]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[23:43:16] [Netty Server IO #1/INFO]: Client attempting to join with 5 mods : minecraft@1.11.2,FML@8.0.99.99,malmomod@0.37.0,forge@13.20.1.2588,mcp@9.19
+[23:43:16] [Netty Local Client IO #0/INFO]: [Netty Local Client IO #0] Client side modded connection established
+[23:43:16] [Server thread/INFO]: [Server thread] Server side modded connection established
+[23:43:16] [Server thread/INFO]: MineRLAgent0[local:E:26b36221] logged in with entity id 1063 at (11.5, 80.0, 237.5)
+[23:43:16] [Server thread/INFO]: MineRLAgent0 joined the game
+[23:43:16] [Server thread/INFO]: [STDOUT]: SERVER request state: DORMANT
+[23:43:16] [Server thread/INFO]: [STDOUT]: SERVER enter state: DORMANT
+[23:43:16] [Server thread/INFO]: [STDOUT]: INCOMING MISSION: Received MissionInit directly through ServerStateMachine constructor.
+[23:43:16] [Server thread/INFO]: [STDOUT]: Mission received: MineRLObtainDiamond-v0
+[23:43:16] [Server thread/INFO]: Received mission: §9MineRLObtainDiamond-v0
+[23:43:16] [Server thread/INFO]: Source: §a127.0.0.1
+[23:43:16] [Server thread/INFO]: [STDOUT]: SERVER request state: BUILDING_WORLD
+[23:43:16] [Server thread/INFO]: [STDOUT]: SERVER enter state: BUILDING_WORLD
+[23:43:16] [Server thread/INFO]: [STDOUT]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[23:43:17] [Client thread/INFO]: [CHAT] Received mission: §9MineRLObtainDiamond-v0
+[23:43:17] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[23:43:17] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
+[23:43:17] [Client thread/INFO]: Mixing MixinRandomSkinTexture from mixins.overclocking.malmomod.json into net.minecraft.client.resources.DefaultPlayerSkin
+[23:43:17] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
+[23:43:17] [Server thread/INFO]: [STDOUT]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[23:43:17] [Server thread/INFO]: [STDOUT]: Experiment requires: 
+[23:43:17] [Server thread/INFO]: [STDOUT]: >>>> MineRLAgent0
+[23:43:17] [Client thread/INFO]: [STDOUT]: ***Telling server we are ready - MineRLAgent0
+[23:43:17] [Server thread/INFO]: [STDOUT]: Initializing player with username MineRLAgent0 and agentname MineRLAgent0
+[23:43:17] [Client thread/INFO]: [STDOUT]: CLIENT request state: RUNNING
+[23:43:17] [Client thread/INFO]: [STDOUT]: CLIENT enter state: RUNNING
+[23:43:17] [Server thread/INFO]: [STDOUT]: SERVER request state: RUNNING
+[23:43:17] [Client thread/INFO]: [STDOUT]: Preparing reward com.microsoft.Malmo.MissionHandlers.RewardForPossessingItemImplementation@51fe7abb with agent name MineRLAgent0
+[23:43:18] [Server thread/INFO]: [STDOUT]: SERVER enter state: RUNNING
+[23:43:18] [Client thread/INFO]: [STDOUT]: [LOGTOPY] On Mac OSX Catalina make sure to install this OpenJDK 1.8.0_152-release-1056-b12, this prevents the NSDragRegions crash
+[23:43:18] [Client thread/INFO]: [STDOUT]: Resized the window
+[23:43:18] [Client thread/INFO]: [STDOUT]: Unpausing
+[23:43:22] [Server thread/INFO]: [STDOUT]: Warning: managed 12/20 ticks this second.
+[23:43:23] [Server thread/INFO]: [STDOUT]: Warning: managed 12/20 ticks this second.
+[23:43:24] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[23:43:25] [Server thread/INFO]: [STDOUT]: Warning: managed 13/20 ticks this second.
+[23:43:28] [Server thread/INFO]: [STDOUT]: Warning: managed 1/20 ticks this second.

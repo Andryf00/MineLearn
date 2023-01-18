@@ -30,24 +30,18 @@ class MinecraftWrapper(Wrapper):
         #if(crafting):print("PRE",action)
         
         if crafting:
+            a=action
             action = self.action_manager2.get_action(action)
+            if a==0:
+                action['equip']=3
         else:action = self.action_manager.get_action(action)
-        #if(crafting):print("PRE",action)
-        """if action['craft']!=0: print(" CRAFTING:", self.craft[action['craft']])
-        if action['nearbyCraft']!=0: print(" NEARBYCRAFTING:", self.nearbyCraft[action['nearbyCraft']])
-        if action['place']!=0: print(" PLACING:", self.place[action['place']])"""
         action['craft']=self.craft[action['craft']]
         action['equip']=self.equip[action['equip']]
         action['nearbyCraft']=self.nearbyCraft[action['nearbyCraft']]
         action['nearbySmelt']=self.nearbySmelt[action['nearbySmelt']]
         action['place']=self.place[action['place']]
 
-        #if(crafting):print(action)
         
-
-        
-        """if action['attack'] == 0:
-            action['jump'] = 1"""
 
         obs, r, self.done, info = super().step(action)
         """        if action['craft']!='none': print("after craft",obs['inventory'])

@@ -9,10 +9,12 @@ import math
 class vec_Network(nn.Module):
     def __init__(self):
         super().__init__()
-        self.fc_vec = nn.Linear(in_features= 18,out_features= 130)
+        self.fc_vec = nn.Linear(in_features= 18,out_features= 256)
+        self.fc_vec2 = nn.Linear(in_features= 256,out_features= 130)
     def forward(self, x):
-        #print("X",x)
         x=self.fc_vec(x)
+        x=F.relu(x)
+        x=self.fc_vec2(x)
         x=F.relu(x)
         return x
 """
