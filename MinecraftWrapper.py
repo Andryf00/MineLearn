@@ -32,6 +32,7 @@ class MinecraftWrapper(Wrapper):
         if crafting:
             a=action
             action = self.action_manager2.get_action(action)
+            print(action)
             if a==0:
                 action['equip']=3
         else:action = self.action_manager.get_action(action)

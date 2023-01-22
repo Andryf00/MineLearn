@@ -6,6 +6,43 @@ import numpy as np
 
 import math
 
+
+class NetworkSQIL(nn.Module):
+    def __init__(self, input_channels, n_actions):
+        super().__init__()
+        self.alpha = 1
+        self.conv1 = nn.Conv2d(in_channels=input_channels, out_channels=32, kernel_size=3, stride=1, padding='same')
+        self.max_pool=nn.MaxPool2d(kernel_size=2, stride=2)
+        self.conv2 = nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1,padding='same')
+        self.conv3 = nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding='same')
+        self.fc1=nn.Linear(in_features=8192, out_features=1024)
+        self.fc2=nn.Linear(in_features=1024, out_features=n_actions)
+    
+    def forward(self, x):
+        x=self.max_pool(F.relu(self.conv1(x)))
+        x=self.max_pool(F.relu(self.conv2(x)))
+        x=torch.flatten(F.relu(self.conv3(x)),1)
+        return F.relu(self.fc2(F.relu(self.fc1(x))))
+
+    def getV(self, q_value):
+        v = self.alpha * torch.log(torch.sum(torch.exp(q_value/self.alpha), dim=1, keepdim=True))
+        return v
+        
+    def choose_action(self, state, exploit=False):
+        state = torch.permute(torch.unsqueeze(torch.FloatTensor(state),0), [0,3,1,2]).to(device)
+        if exploit:
+            a=torch.argmax(self.forward(state))
+        else:
+            with torch.no_grad():
+                q = self.forward(state)
+                v = self.getV(q).squeeze()
+                dist = torch.exp((q-v)/self.alpha)
+                dist = dist / torch.sum(dist)
+                c = Categorical(dist)
+                a = c.sample()
+        
+        return a.item()
+
 class vec_Network(nn.Module):
     def __init__(self):
         super().__init__()
@@ -17,19 +54,6 @@ class vec_Network(nn.Module):
         x=self.fc_vec2(x)
         x=F.relu(x)
         return x
-"""
-class vec_Network(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.fc1 = nn.Linear(in_features= 18,out_features= 64)
-        self.fc2 =  nn.Linear(in_features= 64,out_features= 130)
-    def forward(self, x):
-        #print("X",x)
-        x=self.fc1(x)
-        x=F.relu(x)
-        x=self.fc2(x)
-        x=F.relu(x)
-        return x"""
 
 class Network(nn.Module):
     class _ImpalaResidual(nn.Module):
